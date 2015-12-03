@@ -3,7 +3,7 @@
 
 360Bao平台是华谊保险销售公司的互联网战略平台。公司通过360Bao平台为保险公司显著增加业绩，为互联网公司提供重要的用户流量和业务数据变现，为公司自身积累海量用户资源和数据，从而为电销和精英代理人平台提供数据基础。360Bao是华谊打造场景化保险生态的核心平台，起到连接其他各方资源的作用。
 ##1.2	整体架构
-![平台整体架构 ](https://github.com/360bao/Manual/blob/master/1.png)
+<img src="https://github.com/360bao/Manual/blob/master/1.png>
 ##1.3协议规则
 合作伙伴接入360Bao平台，调用JS API遵循以下基本规则：
 
@@ -112,7 +112,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
    </tr>
 </table>
 ###3.1.1业务流程图
-![业务流程图](https://github.com/360bao/Manual/blob/master/2.png)
+<img src="https://github.com/360bao/Manual/blob/master/2.png">
 
 ###3.1.2接口列表 
 <table>
@@ -613,7 +613,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
    </tr>
 </table>
 ###3.4.1请求报文
-```xml
+``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -646,7 +646,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
 ###3.4.2返回报文
 通过机构和车牌返回是否需要补录信息：
 如果需要补录（status节点为200）返回补录的节点，如果不需要（status节点为100）返回的数据：
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -915,7 +915,7 @@ spellingAcronym：城市拼音缩写
 
 cityPlate:城市车牌号前缀
 ###3.5.1请求报文
-```xml
+``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -1055,7 +1055,7 @@ cityPlate:城市车牌号前缀
 </table>
 
 新车或需要补充信息列表请参考附录表1.
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -1206,7 +1206,7 @@ checkUrl:输入项的验证功能，在输入项有复杂的验证时，没有�
 如果报价异常或者需要中断流程，或者等待状态，返回相对应的报文，返回报文中Stauts节点设置为相对的值（300：拒保、400：中断流程），展示信息提示（ErrorMessages节点数据）。
      
 
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Package>
@@ -1398,7 +1398,7 @@ counter:车辆信息总量；
    </tr>
 </table>
 
-```xml
+``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -1739,7 +1739,7 @@ counter:车辆信息总量；
    </tr>
 </table>
 
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -2557,7 +2557,7 @@ counter:车辆信息总量；
    </tr>
 </table>
 
-```xml
+``` xml
 
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -3373,7 +3373,7 @@ counter:车辆信息总量；
       <td>驾驶员姓名</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -3441,7 +3441,7 @@ counter:车辆信息总量；
 要求页面在切换套餐时如果切换的当前套餐已经有算价过的信息不必要再请求算价，只有当前套餐未算价过才可请求后台算价，自由定制（packageType=optional）除外。
 ###3.8.2返回报文(费改前)
 返回数据见获取报价表单返回数据
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -4010,7 +4010,7 @@ counter:车辆信息总量；
       <td>驾驶员姓名</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <Package>
@@ -4392,7 +4392,7 @@ counter:车辆信息总量；
       <td>生效时间(小时)</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -4762,7 +4762,7 @@ counter:车辆信息总量；
       <td>用户选择的套餐</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -5027,7 +5027,7 @@ counter:车辆信息总量；
 2.采集信息账号号标记为需要（accountNumberSign=1），必须采集账号（accountNumber）
 
 3.用户可以不投任何礼品
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -5825,7 +5825,7 @@ CODECODE：省市区代码
       <td>1:需要,0:不需要</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -6103,7 +6103,7 @@ http://chexian.sinosig.com/Net/nCityInfoAction!getRegionListByParentCodeForInter
 其中
 TITLE ：省市区的名字
 CODE：省市区代码 需回传阳光
-```xml
+``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -6143,7 +6143,7 @@ CODE：省市区代码 需回传阳光
 1、	修改成功，返回status为100。
 2、	修改失败，返回失败信息
 修改成功报文;
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -6213,7 +6213,7 @@ CODE：省市区代码 需回传阳光
       <td>第三方商品ID</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -6253,7 +6253,7 @@ CODE：省市区代码 需回传阳光
 2.确认中，保险公司可能在重新核保，需要核保通过后会
 3.失败，无法支付
 
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -6327,7 +6327,7 @@ CODE：省市区代码 需回传阳光
 在120中新增加节点IsIdVerifi,如果120返回报文中,IsIdVerifi为1则直接调用127接口进行验证即可,无需调用此接口,只有在短信未发送到用户手机或用户多次输入验证码错误,需要重新获取验证码的时候才调用此接口.
 ###3.13.1请求报文
 Request节点中 无参数
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList>
 	<Package>
@@ -6367,7 +6367,7 @@ Request节点中 无参数
       <td>失败原因</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList>
 	<Package>
@@ -6411,7 +6411,7 @@ Request节点中 无参数
    </tr>
 </table>
 ###3.14.1请求报文
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList>
 	<Package>
@@ -6451,7 +6451,7 @@ Request节点中 无参数
       <td>失败原因</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList>
 	<Package>
@@ -6607,7 +6607,7 @@ Request节点中 无参数
 </table>
 
 ###3.15.1请求报文
-```xml
+```  xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Package>
@@ -6687,7 +6687,7 @@ Request节点中 无参数
       <td>保险公司保单号</td>
    </tr>
 </table>
-```xml
+``` xml
 <?xml version="1.0" encoding="GBK"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Package>
@@ -7063,7 +7063,7 @@ Request节点中 无参数
 注意事项
 1：所有报文交互中涉及保费和支付金额等节点都是以分为单位，
 如保费是100元，报文的节点是10000
-```xml
+``` xml
 <Tag>
             <Definition name="type">label</Definition>
             <Definition name="key">covOd</Definition>
@@ -7098,7 +7098,7 @@ Request节点中 无参数
                </Tag>
 ```
 如下节点，都是以分为单位。
-```xml
+``` xml
 <Definition name="premium">10000</Definition>
 
 <Premium>230643</Premium>
