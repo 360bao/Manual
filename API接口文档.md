@@ -612,6 +612,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
       <td>1：新车，0：非新车</td>
    </tr>
 </table>
+
 ###3.4.1请求报文
 ``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
@@ -643,6 +644,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
 	</Package>
 </PackageList>
 ```
+
 ###3.4.2返回报文
 通过机构和车牌返回是否需要补录信息：
 如果需要补录（status节点为200）返回补录的节点，如果不需要（status节点为100）返回的数据：
@@ -686,6 +688,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
 	</Package>
 </PackageList>
 ```
+
 ##3.5基础信息接口
 该接口初步设计在根据车牌和身份证查询客户信息后直接调用输入项接口，返回客户需要补充的信息。
 <table>
@@ -775,6 +778,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
    </tr>
 
 </table>
+
 城市编码请求阳光提供的地址返回josn字符用jsonp解决ajax跨域请求（注：如果是ajax请求，最好使用post方式提交，避免乱码）
 
 根据参数返回对应城市地址
@@ -914,7 +918,9 @@ Spelling：城市拼音全拼
 spellingAcronym：城市拼音缩写
 
 cityPlate:城市车牌号前缀
+
 ###3.5.1请求报文
+
 ``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -956,7 +962,9 @@ cityPlate:城市车牌号前缀
 	</Package>
 </PackageList>
 ```
+
 ###3.5.2返回报文
+
 1.通过车牌和身份证信息查询客户，根据查询结果情况返回：
 如果可直接报价则报价套餐和车辆、车主信息返回（status节点为100），否则新保返回需要采集信息的节点（status节点为200），第三方根据返回报文向用户展示采集项。
 新保返回的数据：
@@ -3373,6 +3381,7 @@ counter:车辆信息总量；
       <td>驾驶员姓名</td>
    </tr>
 </table>
+
 ``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -3437,10 +3446,13 @@ counter:车辆信息总量；
 	</Package>
 </PackageList>
 ```
+
 当用户选择套餐为自由定制时（packageType=optional），需要入参险种列表，其他套餐只需要传入套餐和起保日期即可，不必传险种列表（传入无效）。
 要求页面在切换套餐时如果切换的当前套餐已经有算价过的信息不必要再请求算价，只有当前套餐未算价过才可请求后台算价，自由定制（packageType=optional）除外。
+
 ###3.8.2返回报文(费改前)
 返回数据见获取报价表单返回数据
+
 ``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -3770,12 +3782,15 @@ counter:车辆信息总量；
 	</Package>
 </PackageList>
 ```
+
 第三方要根据交强险和商业险标签判断是否显示保费。
 
 用户选择日期算价后可能存
 在重复投保，系统会提示重复投保的信息（ErrorMessages），此提示信息需要展示给用户，并且商业会正常算价结果，交强将会算价失败。
 其他参考获取报价表单（100）接口
+
 ###3.8.3请求报文(费改后)
+
 请求入参
 <table>
    <tr>
@@ -4074,7 +4089,9 @@ counter:车辆信息总量；
 </Package>
 </PackageList>
 ```
+
 ###3.8.4返回报文(费改后)
+
 <table>
    <tr>
       <td>字段</td>
@@ -4392,6 +4409,7 @@ counter:车辆信息总量；
       <td>生效时间(小时)</td>
    </tr>
 </table>
+
 ``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -4743,7 +4761,9 @@ counter:车辆信息总量；
 	</Package>
 </PackageList>
 ```
+
 ##3.9保存保费接口
+
 接口说明：计算保费并且返回相关费用值（投保礼 和 加投信息）
 请求入参：
 <table>
@@ -4762,6 +4782,7 @@ counter:车辆信息总量；
       <td>用户选择的套餐</td>
    </tr>
 </table>
+
 ``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -4790,6 +4811,7 @@ counter:车辆信息总量；
 	</Package>
 </PackageList>
 ```
+
 3.9.2返回报文
 返回数据说明
 <table>
@@ -4999,7 +5021,7 @@ counter:车辆信息总量；
       <td>车籍地</td>
    </tr>
 </table>
->
+
  特约说明：
  
 交强特约以engage_tra_开头，有几条特约就会产生几个。商业类似。
@@ -5027,6 +5049,7 @@ counter:车辆信息总量；
 2.采集信息账号号标记为需要（accountNumberSign=1），必须采集账号（accountNumber）
 
 3.用户可以不投任何礼品
+
 ``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -5143,6 +5166,7 @@ counter:车辆信息总量；
 	</Package>
 </PackageList>
 ```
+
 ##3.10申请核保接口
 申请核保中提交保费计算返回的报文信息，用户选择的商业险套餐和是否投保交强险信息。
 ###3.10.1请求报文
@@ -5379,6 +5403,8 @@ counter:车辆信息总量；
 收件地址为3级联动，具体省市区由阳光提供，用jsonp解决ajax跨域请求
 
 http://chexian.sinosig.com/Net/nCityInfoAction!getRegionListByParentCodeForInterface.action?province=0&encoding=GBK&callback=jsonp1045
+
+
 ``` json
 [
     {
@@ -5520,6 +5546,8 @@ http://chexian.sinosig.com/carThroughCityAction/carThroughCityAction_getAllCarTh
 其中
 CODECNAME：省市区的名字
 CODECODE：省市区代码
+
+
 ``` json
 [
     {
@@ -5687,6 +5715,7 @@ CODECODE：省市区代码
 其中
 CODECNAME：省市区的名字
 CODECODE：省市区代码
+
 ``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -5762,7 +5791,9 @@ CODECODE：省市区代码
 </PackageList>
 
 ```
+
 ###3.10.2返回报文
+
 申请核保接口返回三个状态：
 1.核保成功，返回投保单号。
 2.核保中，在核保流程中
@@ -5825,6 +5856,7 @@ CODECODE：省市区代码
       <td>1:需要,0:不需要</td>
    </tr>
 </table>
+
 ``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -5891,10 +5923,13 @@ CODECODE：省市区代码
 	</Package>
 </PackageList>
 ```
+
 其他参考获取报价表单（100）接口。
 
 ##3.11配送信息修改接口
+
 申请核保中提交修改配送信息接口返回的报文信息。
+
 ###3.11.1请求报文
 
 <table>
@@ -5972,6 +6007,7 @@ CODECODE：省市区代码
 http://chexian.sinosig.com/Net/nCityInfoAction!getRegionListByParentCodeForInterface.action?province=0&encoding=GBK&callback=jsonp1045
 
 其中province值为上级的代码，province=0时取全部省
+
 ```json
 [
     {
@@ -6100,9 +6136,11 @@ http://chexian.sinosig.com/Net/nCityInfoAction!getRegionListByParentCodeForInter
     }
 ]
 ```
+
 其中
 TITLE ：省市区的名字
 CODE：省市区代码 需回传阳光
+
 ``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -6136,13 +6174,15 @@ CODE：省市区代码 需回传阳光
 		<Sign>N12O766is77ZIcFPRS_OmTVOFgJ9I7P8rqN2Tu77kfhbhLfAuDrBP3abv4PMKBpuPpT-CayjUXlRkveJVuV14ml5ZZHDW6rY0TrG7RGTh7y9kvTtroM4LuGtFN7LctbXSxyL_rp9lo8J3cO5NyAknSL3_jjDl_iyZMpBozItzLU</Sign>
 	</Package>
 </PackageList>
-
 ```
+
 ###3.11.2返回报文
+
 修改配送信息接口返回两个状态：
 1、	修改成功，返回status为100。
 2、	修改失败，返回失败信息
 修改成功报文;
+
 ``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -6164,6 +6204,7 @@ CODE：省市区代码 需回传阳光
 </PackageList>
 
 修改失败报文：
+
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -6213,6 +6254,7 @@ CODE：省市区代码 需回传阳光
       <td>第三方商品ID</td>
    </tr>
 </table>
+
 ``` xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -6247,6 +6289,7 @@ CODE：省市区代码 需回传阳光
 	</Package>
 </PackageList>
 ```
+
 ###3.12.2返回报文
 在支付检查接口中，保险公司检查是否可以支付时，如果发现已经不能支付，比如超过支付时间，脱保等，可以重新核保，返回给客户支付，也可以返回无法支付状态
 1.成功，可以支付
@@ -6322,11 +6365,15 @@ CODE：省市区代码 需回传阳光
 	</Package>
 </PackageList>
 ```
+
 其他参考获取报价表单（100）接口。
+
 ##3.13获取验证码接口(126)
 在120中新增加节点IsIdVerifi,如果120返回报文中,IsIdVerifi为1则直接调用127接口进行验证即可,无需调用此接口,只有在短信未发送到用户手机或用户多次输入验证码错误,需要重新获取验证码的时候才调用此接口.
+
 ###3.13.1请求报文
 Request节点中 无参数
+
 ``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList>
@@ -6349,6 +6396,7 @@ Request节点中 无参数
 </PackageList>
 
 ```
+
 ###3.13.2返回报文
 <table>
    <tr>
@@ -6391,6 +6439,7 @@ Request节点中 无参数
 </PackageList>
 
 ```
+
 ##3.14保存验证码（127）
 <table>
    <tr>
@@ -6410,7 +6459,9 @@ Request节点中 无参数
       <td>用户输入的验证码</td>
    </tr>
 </table>
+
 ###3.14.1请求报文
+
 ``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList>
@@ -6433,7 +6484,9 @@ Request节点中 无参数
 	</Package>
 </PackageList>
 ```
+
 ###3.14.2返回报文(与126返回报文相同)
+
 <table>
    <tr>
       <td>字段</td>
@@ -6451,6 +6504,7 @@ Request节点中 无参数
       <td>失败原因</td>
    </tr>
 </table>
+
 ``` xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList>
@@ -6475,7 +6529,9 @@ Request节点中 无参数
 </PackageList>
 
 ```
+
 ##3.15承保接口
+
 支付信息(Payment)：
 <table>
    <tr>
@@ -6607,6 +6663,7 @@ Request节点中 无参数
 </table>
 
 ###3.15.1请求报文
+
 ```  xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
