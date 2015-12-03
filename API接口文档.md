@@ -494,3 +494,14 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
       <td></td>
    </tr>
 </table>
+
+###3.2.4Tag特别说明
+. 套餐tag中，value保存金额时单位为元，Premium单位为分；
+. Disable设置为不可操作后（即设置为1），值不会回传给保险公司；
+. Premium只有套餐tag中使用，单位默认为分；
+. label 元素名称；
+. key 对应元素的数据字典；
+. data 提供给用户选择的数据。
+. dataUrl 初始数据远程数据地址。
+. 一个Tag控件是一个元素。
+
