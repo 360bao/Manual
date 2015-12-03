@@ -475,38 +475,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
       <td>Definition</td>
       <td>控件描述信息</td>
       <td>控件</td>
-      <td>type：控件类型</td>
-   </tr>
-   <tr>
-      <td>key：控件的key</td>
-   </tr>
-   <tr>
-      <td>lable：显示文字</td>
-   </tr>
-   <tr>
-      <td>value：默认值</td>
-   </tr>
-   <tr>
-      <td>data：初始数据</td>
-   </tr>
-   <tr>
-      <td>dataUrl：初始数据连接</td>
-   </tr>
-   <tr>
-      <td>checkUrl：数据验证地址</td>
-   </tr>
-   <tr>
-      <td>premium: 险别保费</td>
-   </tr>
-   <tr>
-      <td>range ：范围</td>
-      <td>type、key、lable是必选项，对于类似select这样的控件，data或者dataUrl应该是必须的</td>
-   </tr>
-   <tr>
-      <td></td>
-   </tr>
-   <tr>
-      <td>range:输入的值必须在这个知道范围内</td>
+      <td>type：控件类型<br>key：控件的key<br>lable：显示文字<br>value：默认值<br>data：初始数据<br>dataUrl：初始数据连接<br>checkUrl：数据验证地址<br>premium: 险别保费<br>range ：范围<br>type、key、lable是必选项，对于类似select这样的控件，data或者dataUrl应该是必须的<br>range:输入的值必须在这个知道范围内</td>
    </tr>
    <tr>
       <td>5</td>
@@ -522,9 +491,6 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
       <td>第三方支付单信息</td>
       <td>控件</td>
       <td></td>
-      <td></td>
-   </tr>
-   <tr>
       <td></td>
    </tr>
 </table>
