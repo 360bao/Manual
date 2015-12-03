@@ -613,7 +613,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
    </tr>
 </table>
 ###3.4.1请求报文
-``` xml
+<code class="lang-xml">
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -642,7 +642,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
 		<Sign>bOSUg6k2XvfetURrXxb7sn7n2mDV8MfbuDWu4bVihL1cFtCkhdG_P2S8EIebaspNU_lmFQ63-SP_wjL6_et_VHpvGIrckT8LIq5WQVbVok9n2hioTlsmNRFC_cZoXR-VQczTN_3t6-JraY-7xB1YSul2sZCPTUwDxz0qzRs-mXk</Sign>
 	</Package>
 </PackageList>
-```
+</code>
 ###3.4.2返回报文
 通过机构和车牌返回是否需要补录信息：
 如果需要补录（status节点为200）返回补录的节点，如果不需要（status节点为100）返回的数据：
