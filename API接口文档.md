@@ -1,10 +1,10 @@
-##1.	平台简介
-###1.1	使命和目标
+#1.	平台简介
+##1.1	使命和目标
 
 360Bao平台是华谊保险销售公司的互联网战略平台。公司通过360Bao平台为保险公司显著增加业绩，为互联网公司提供重要的用户流量和业务数据变现，为公司自身积累海量用户资源和数据，从而为电销和精英代理人平台提供数据基础。360Bao是华谊打造场景化保险生态的核心平台，起到连接其他各方资源的作用。
-###1.2	整体架构
+##1.2	整体架构
 ![平台整体架构 ](https://github.com/360bao/Manual/blob/master/1.png)
-###1.3协议规则
+##1.3协议规则
 合作伙伴接入360Bao平台，调用JS API遵循以下基本规则：
 
 - 采用POST方法提交
@@ -46,7 +46,7 @@
    </tr>
 </table>
 
-##2.	JS SDK
+#2.	JS SDK
 
 ``` javascript
 {
@@ -64,7 +64,7 @@
 	}]
 }
 ```
-###2.1接入API (CATEGORY: CONNECT)
+##2.1接入API (CATEGORY: CONNECT)
 接入API提供合作伙伴接入验证功能，共有三个方法：
 - 注册：提供手机号、密码，注册成为合作伙伴，获取专属URL和Error
 Register(PhoneNum string, Password string) (URL string, Error error)
@@ -73,14 +73,14 @@ Login(PhoneNum string, Password string) (SessionId string, Error error)
 - 修改密码：提供手机号、旧密码和新密码，获得Error
 UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error error)
 
-###2.2交易查询API (CATEGORY: QUERY)
+##2.2交易查询API (CATEGORY: QUERY)
 交易查询API提供保单、佣金的信息查询，以及提交保单数据异常的申请。
 - 查询保单：获取部分或全部保单数据
 - 查询佣金：获取佣金明细
 - 异常申请：
  
-##3.车险接口
-###3.1交互模式
+#3.车险接口
+##3.1交互模式
 <table>
    <tr>
       <td>属性</td>
@@ -253,7 +253,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
 注1：双方的接口需要支持多个<Package>节点的情况。
 注2：无论报头还是报体，都会经常扩展新字段，因此第三方公司在实现时务必让其可以自动兼容。新扩展字段都是非必选字段。
 
-###3.2.1报文头
+####3.2.1报文头
 
 请求报文的报文头是固定的，第三方请求与保险公司请求头信息略有不同，第三方请求报文From为第三方的标识，To为保险公司URL；保险公司返回报文From为保险公司ComId，To为三方的标识。
 报文头格式：
@@ -496,12 +496,297 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
 </table>
 
 ###3.2.4Tag特别说明
-. 套餐tag中，value保存金额时单位为元，Premium单位为分；
-. Disable设置为不可操作后（即设置为1），值不会回传给保险公司；
-. Premium只有套餐tag中使用，单位默认为分；
-. label 元素名称；
-. key 对应元素的数据字典；
-. data 提供给用户选择的数据。
-. dataUrl 初始数据远程数据地址。
-. 一个Tag控件是一个元素。
+1. 套餐tag中，value保存金额时单位为元，Premium单位为分；
+2. Disable设置为不可操作后（即设置为1），值不会回传给保险公司；
+3. Premium只有套餐tag中使用，单位默认为分；
+4. label 元素名称；
+5. key 对应元素的数据字典；
+6. data 提供给用户选择的数据。
+7. dataUrl 初始数据远程数据地址。
+8. 一个Tag控件是一个元素。
 
+##3.3接口详细
+###3.3.1初始化背景色
+     此接口只为第三方使用H5页面接口时，需要配置页面背景色和按钮颜色的。
+未使用H5页面接口不需要阅读，跳过。
+###3.3.2请求报文
+``` xml
+<?xml version='1.0' encoding='GBK' standalone='yes'?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>050</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>SMG0000000</SessionId>
+			<From>MobileCar</From>
+			<To>Server</To>
+			<AgentCode>W02400654</AgentCode>
+			<SendTime>2015-01-21 20:15:24</SendTime>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Request>
+			<InputsList></InputsList>
+		</Request>
+	<Sign>Dw5eRgbkwsIXBNbJk6ttGFlBmv6GmX19iLeGU--ijygwqeQ4G12-BPOJh1HecnrjrxjND2OWGcLPGR2IcOqRx90DAXFtGnntOISCRPa0zWsSaD6m_KuvYBA4l9W6c5WykS34Cajt-7sdRtxB2ifyFFv8zPWGy3K9h0ToDyjmyQU</Sign>
+	</Package>
+</PackageList>
+```
+###3.3.3返回报文
+``` xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<version>2</version>
+			<RequestType>050</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>SMG0000000</SessionId>
+			<SellerId>3597746367</SellerId>
+			<SendTime>2015-01-21 20:15:24</SendTime>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+	<Sign>DQKjke82VWGZgi7Atf8j6LNIRK1u9PILdWkBS5cY7wbgPDYcx_FKIRn8BUVjnruUdjzPo3W2HVbLPmHjqA-iZBbIjL8JUCVeIuvatKsbcln64d28x6FFWPvl2EklGKECA8C8LZEG65rH49PJDM7TvEGVO81h42uPPEPAb2vKLvk</Sign>
+		<Response>
+			<TagsList>
+				<Tags type="cssArray">
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">background</Definition>
+						<Definition name="label">css</Definition>
+						<Definition name="value">#ff8700</Definition>
+						<Definition name="data"></Definition>
+						<Definition name="dataUrl"></Definition>
+						<Definition name="checkUrl"></Definition>
+						<Definition name="premium"></Definition>
+					</Tag>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">radio</Definition>
+						<Definition name="label">css</Definition>
+						<Definition name="value">#53c35d</Definition>
+						<Definition name="data"></Definition>
+						<Definition name="dataUrl"></Definition>
+						<Definition name="checkUrl"></Definition>
+						<Definition name="premium"></Definition>
+					</Tag>
+				</Tags>
+			</TagsList>
+		</Response>
+	</Package>
+</PackageList>
+```
+##3.4获取发动机和车架号
+用户选择机构和输入车牌后触发此接口，返回是否需要用户补录信息。
+ 需要录入信息：
+<table>
+   <tr>
+      <td>字段</td>
+      <td>描述</td>
+      <td>类型</td>
+      <td>可为空</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>cityCode</td>
+      <td>城市代码</td>
+      <td>String</td>
+      <td>否</td>
+      <td>城市国标码</td>
+   </tr>
+   <tr>
+      <td>licenseNo</td>
+      <td>车牌号</td>
+      <td>String</td>
+      <td>是</td>
+      <td>新车为空</td>
+   </tr>
+   <tr>
+      <td>noLicenseFlag</td>
+      <td>新车未上牌</td>
+      <td>String</td>
+      <td>否</td>
+      <td>1：新车，0：非新车</td>
+   </tr>
+</table>
+###3.4.1请求报文
+``` xml
+<?xml version='1.0' encoding='GBK' standalone='yes'?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>095</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501212131161338</SessionId>
+			<From>MobileCar</From>
+			<To>Server</To>
+			<AgentCode>W00110002</AgentCode>
+			<SendTime>2015-01-21 21:31:37</SendTime>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Request>
+			<InputsList>
+				<Inputs type='vehicleInfo'>
+					<input name='licenseNo'>冀A00021</input>
+					<input name='cityCode'>07518800</input>
+					<input name='noLicenseFlag'>0</input>
+				</Inputs>
+			</InputsList>
+		</Request>
+		<Sign>bOSUg6k2XvfetURrXxb7sn7n2mDV8MfbuDWu4bVihL1cFtCkhdG_P2S8EIebaspNU_lmFQ63-SP_wjL6_et_VHpvGIrckT8LIq5WQVbVok9n2hioTlsmNRFC_cZoXR-VQczTN_3t6-JraY-7xB1YSul2sZCPTUwDxz0qzRs-mXk</Sign>
+	</Package>
+</PackageList>
+```
+###3.4.2返回报文
+通过机构和车牌返回是否需要补录信息：
+如果需要补录（status节点为200）返回补录的节点，如果不需要（status节点为100）返回的数据：
+``` xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<version>2</version>
+			<RequestType>095</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501212131161338</SessionId>
+			<SellerId>3597746367</SellerId>
+			<SendTime>2015-01-21 21:31:38</SendTime>
+			<Status>200</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Sign>dl-G_33FZ25tmZCQU2WQb9kgBvn7yDCfMsrT_d5H1ehWOnmtTeRsAD6bkIsEP0jhxnsQYpe0H2drAE31EJLjG0-X1VVJNNVbix6Bq1R5-XFpU9xHzwIdpO8AeKuiIBjL9zB6-2UkM6QSByVFAECUSDt14ufJEiGDhvj_2KclXiw</Sign>
+		<Response>
+			<TagsList>
+				<Tags type="vehicleInfo">
+					<Tag>
+						<Definition name="type">text</Definition>
+						<Definition name="key">vehicleFrameNo</Definition>
+						<Definition name="label">车架号</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="dataUrl"></Definition>
+						<Definition name="checkUrl"></Definition>
+					</Tag>
+					<Tag>
+						<Definition name="type">text</Definition>
+						<Definition name="key">engineNo</Definition>
+						<Definition name="label">发动机号</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="dataUrl"></Definition>
+						<Definition name="checkUrl"></Definition>
+					</Tag>
+				</Tags>
+			</TagsList>
+		</Response>
+	</Package>
+</PackageList>
+```
+##3.5基础信息接口
+该接口初步设计在根据车牌和身份证查询客户信息后直接调用输入项接口，返回客户需要补充的信息。
+<table>
+   <tr>
+      <td>字段</td>
+      <td>描述</td>
+      <td>类型</td>
+      <td>是否可为空</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>cityCode</td>
+      <td>城市代码</td>
+      <td>String</td>
+      <td>否</td>
+      <td>阳光提供见下说明</td>
+   </tr>
+   <tr>
+      <td>licenseNo</td>
+      <td>车牌号</td>
+      <td>String</td>
+      <td>是</td>
+      <td>新车为空</td>
+   </tr>
+   <tr>
+      <td>noLicenseFlag</td>
+      <td>新车未上牌</td>
+      <td>String</td>
+      <td>否</td>
+      <td>1：新车，0：非新车</td>
+   </tr>
+   <tr>
+      <td>ownerName</td>
+      <td>车主姓名</td>
+      <td>String</td>
+      <td>否</td>
+      <td>姓名</td>
+   </tr>
+   <tr>
+      <td>ownerMobile</td>
+      <td>手机号码</td>
+      <td>String</td>
+      <td>否</td>
+      <td>月份，如：13800138000</td>
+   </tr>
+   <tr>
+      <td>agentCode</td>
+      <td>服务区域代码</td>
+      <td>String</td>
+      <td>否</td>
+      <td>如：W03210001</td>
+   </tr>
+   <tr>
+      <td>spsource</td>
+      <td>广告来源代码</td>
+      <td>String</td>
+      <td>否</td>
+      <td>P05代码</td>
+   </tr>
+   <tr>
+      <td>netcampaignno</td>
+      <td>网销营销活动代码 </td>
+      <td>String</td>
+      <td>否</td>
+      <td>H代码</td>
+   </tr>
+   <tr>
+      <td>accountType</td>
+      <td>账号类型</td>
+      <td>String</td>
+      <td>是</td>
+      <td>QQ、微信</td>
+   </tr>
+   <tr>
+      <td>accountNo</td>
+      <td>账号</td>
+      <td>String</td>
+      <td>是</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>terminalType</td>
+      <td>终端类型</td>
+      <td>String</td>
+      <td>是</td>
+      <td>例如：1：IPAD；</td>
+   </tr>
+
+</table>
+城市编码请求阳光提供的地址返回josn字符用jsonp解决ajax跨域请求（注：如果是ajax请求，最好使用post方式提交，避免乱码）：
+根据参数返回对应城市地址：
+http://chexian.sinosig.com/travelCity!getTravelCityForInterface.action?hotSign=4&limit=0&queryCon=邯郸&contName=大名&encoding=GBK&callback=jsonp1045
+hotSign 为查询类型标识 说明一下。机构就是投保地区
+hotSign 为0:根据关键字查询机构。queryCon为用户输入的关键字，可是城市拼音缩写、拼音全拼、汉字
+hotSign 为1:查询热门城市，查询热门城市queryCon、contName为空或不传即可。
+hotSign 为2:查询二级机构（也就是省份）。queryCon、contName为空或不传即可。
+hotSign 为3:根据选择的省份或者城市查询三级或四级级机构。queryCon为省份或者城市的机构代码。如：选择北京的下级机构，queryCon为北京的机构代码。contName为空或不传即可。
+hotSign 为4:根据城市名称查询机构。queryCon为城市名称（不带市）。如：选择北京的下级机构，queryCon为北京的机构代码。contName为县或区名称（不带县或区）
+ limit分页输入0即可
+ 
+ 返回示例：
+ ``` javascript
+ jsonp1045([{"id":"01562800","ContName":"北京 通州","rank":"3","spelling":"tongzhou","spellingAcronym":"tz","cityPlate":"京","proPlate":"京"},{"id":"03546710","ContName":"南通市 通州","rank":"4","spelling":"tongzhou","spellingAcronym":"tz","cityPlate":"苏F","proPlate":"苏F"},{"id":"06526202","ContName":"南阳市 桐柏县","rank":"4","spelling":"tongbaixian","spellingAcronym":"tbx","cityPlate":"豫R","proPlate":"豫R"},{"id":"06665104","ContName":"开封市 通许县","rank":"4","spelling":"tongxuxian","spellingAcronym":"txx","cityPlate":"豫B","proPlate":"豫B"},{"id":"19501702","ContName":"杭州市 桐庐市","rank":"4","spelling":"tonglushi","spellingAcronym":"tls","cityPlate":"浙A","proPlate":"浙A"},{"id":"19533020","ContName":"嘉兴市 桐乡县","rank":"4","spelling":"tongxiangxian","spellingAcronym":"txx","cityPlate":"浙F","proPlate":"浙F"},{"id":"25573000","ContName":"铜川市","rank":"3","spelling":"TongChuanShi","spellingAcronym":"tcs","cityPlate":"陕B","proPlate":"陕B"},{"id":"27511400","ContName":"通化市","rank":"3","spelling":"TongHuaShi","spellingAcronym":"ths","cityPlate":"吉E","proPlate":"吉E"},{"id":"33581002","ContName":"安庆市 桐城市","rank":"4","spelling":"tongcheng","spellingAcronym":"tc","cityPlate":"皖H","proPlate":"皖H"},{"id":"36582200","ContName":"通辽市","rank":"3","spelling":"TongLiaoShi","spellingAcronym":"tls","cityPlate":"蒙G","proPlate":"蒙G"},{"id":"37520600","ContName":"厦门 同安区","rank":"3","spelling":"tonganqu","spellingAcronym":"taq","cityPlate":"闽D","proPlate":"闽D"}])
+ ```
