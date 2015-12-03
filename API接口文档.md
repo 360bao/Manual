@@ -5515,6 +5515,1592 @@ CODE：省市区代码 需回传阳光
 车籍地信息说明：
 车籍地为2级联动，用ajax请求。
 
+http://chexian.sinosig.com/carThroughCityAction/carThroughCityAction_getAllCarThroughCity.action?code=00&encoding=GBK&callback=jsonp1045
 其中
 CODECNAME：省市区的名字
 CODECODE：省市区代码
+``` json
+[
+    {
+        "CODECNAME": "北京市", 
+        "CODECODE": "11", 
+        "id": 1
+    }, 
+    {
+        "CODECNAME": "天津市", 
+        "CODECODE": "12", 
+        "id": 2
+    }, 
+    {
+        "CODECNAME": "河北省", 
+        "CODECODE": "13", 
+        "id": 3
+    }, 
+    {
+        "CODECNAME": "山西省", 
+        "CODECODE": "14", 
+        "id": 4
+    }, 
+    {
+        "CODECNAME": "内蒙古自治区", 
+        "CODECODE": "15", 
+        "id": 5
+    }, 
+    {
+        "CODECNAME": "辽宁省", 
+        "CODECODE": "21", 
+        "id": 6
+    }, 
+    {
+        "CODECNAME": "吉林省", 
+        "CODECODE": "22", 
+        "id": 7
+    }, 
+    {
+        "CODECNAME": "黑龙江省", 
+        "CODECODE": "23", 
+        "id": 8
+    }, 
+    {
+        "CODECNAME": "上海市", 
+        "CODECODE": "31", 
+        "id": 9
+    }, 
+    {
+        "CODECNAME": "江苏省", 
+        "CODECODE": "32", 
+        "id": 10
+    }, 
+    {
+        "CODECNAME": "浙江省", 
+        "CODECODE": "33", 
+        "id": 11
+    }, 
+    {
+        "CODECNAME": "安徽省", 
+        "CODECODE": "34", 
+        "id": 12
+    }, 
+    {
+        "CODECNAME": "福建省", 
+        "CODECODE": "35", 
+        "id": 13
+    }, 
+    {
+        "CODECNAME": "江西省", 
+        "CODECODE": "36", 
+        "id": 14
+    }, 
+    {
+        "CODECNAME": "山东省", 
+        "CODECODE": "37", 
+        "id": 15
+    }, 
+    {
+        "CODECNAME": "河南省", 
+        "CODECODE": "41", 
+        "id": 16
+    }, 
+    {
+        "CODECNAME": "湖北省", 
+        "CODECODE": "42", 
+        "id": 17
+    }, 
+    {
+        "CODECNAME": "湖南省", 
+        "CODECODE": "43", 
+        "id": 18
+    }, 
+    {
+        "CODECNAME": "广东省", 
+        "CODECODE": "44", 
+        "id": 19
+    }, 
+    {
+        "CODECNAME": "广西壮族自治区", 
+        "CODECODE": "45", 
+        "id": 20
+    }, 
+    {
+        "CODECNAME": "海南省", 
+        "CODECODE": "46", 
+        "id": 21
+    }, 
+    {
+        "CODECNAME": "重庆市", 
+        "CODECODE": "50", 
+        "id": 22
+    }, 
+    {
+        "CODECNAME": "四川省", 
+        "CODECODE": "51", 
+        "id": 23
+    }, 
+    {
+        "CODECNAME": "贵州省", 
+        "CODECODE": "52", 
+        "id": 24
+    }, 
+    {
+        "CODECNAME": "云南省", 
+        "CODECODE": "53", 
+        "id": 25
+    }, 
+    {
+        "CODECNAME": "西藏自治区", 
+        "CODECODE": "54", 
+        "id": 26
+    }, 
+    {
+        "CODECNAME": "陕西省", 
+        "CODECODE": "61", 
+        "id": 27
+    }, 
+    {
+        "CODECNAME": "甘肃省", 
+        "CODECODE": "62", 
+        "id": 28
+    }, 
+    {
+        "CODECNAME": "青海省", 
+        "CODECODE": "63", 
+        "id": 29
+    }, 
+    {
+        "CODECNAME": "宁夏回族自治区", 
+        "CODECODE": "64", 
+        "id": 30
+    }, 
+    {
+        "CODECNAME": "新疆维吾尔自治区", 
+        "CODECODE": "65", 
+        "id": 31
+    }, 
+    {
+        "CODECNAME": "台湾省", 
+        "CODECODE": "71", 
+        "id": 32
+    }
+]
+```
+其中
+CODECNAME：省市区的名字
+CODECODE：省市区代码
+``` xml
+<?xml version='1.0' encoding='GBK' standalone='yes'?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>120</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501292002149038</SessionId>
+			<From>MobileCar</From>
+			<To>Server</To>
+			<AgentCode>W02400654</AgentCode>
+			<SendTime>2015-01-29 21:54:09</SendTime>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Request>
+			<InputsList>
+				<Inputs type='insuredInfo'>
+					<input name='insuredIdNo'>130429198601173637</input>
+					<input name='insuredEmail'></input>
+					<input name='insuredName'>日日通</input>
+					<input name='insuredMobile'>18511565612</input>
+				</Inputs>
+				<Inputs type='applicantInfo'>
+					<input name='applicantEmail'></input>
+					<input name='applicantIdNo'>130429198601173637</input>
+					<input name='applicantMobile'>18511565612</input>
+					<input name='applicantName'>日日通</input>
+				</Inputs>
+				<Inputs type='ownerInfo'>
+					<input name='ownerName'>日日通</input>
+					<input name='ownerMobile'></input>
+					<input name='ownerIdNo'>130429198601173637</input>
+					<input name='ownerEmail'>18511565612</input>
+				</Inputs>
+				<Inputs type='deliverInfo'>
+					<input name='sendDate'></input>
+					<input name='addresseeName'>日日通</input>
+					<input name='addresseeMobile'>18511565612</input>
+					<input name='addresseeProvince'>11</input>
+					<input name='addresseeCity'>1101</input>
+					<input name='addresseeTown'>110101</input>
+					<input name='insuredaddresseeDetails'>北京 市辖区 东城区 为人为认为</input>
+					<input name='addresseeDetails'>北京 市辖区 东城区 为人为认为</input>
+				</Inputs>
+				<Inputs type='lifeTablePresent'>
+					<input name='preAccountNumbers'></input>
+					<input name='pkIdEncryptions'>1ebc155c4cbbd11a</input>
+					<input name='prePhoneNos'></input>
+					<input name='prepresentnums'>1</input>
+				</Inputs>
+            
+<Inputs type='CarThroughCity'>
+	<input name='carPlace'>110000</input>
+</Inputs>
+			</InputsList>
+			<Order>
+				<TBOrderId>201501292002149038</TBOrderId>
+				<SubOrderList>
+					<SubOrder type='force'>
+						<TBOrderId>201501292002149038</TBOrderId>
+					</SubOrder>
+					<SubOrder type='biz'>
+						<TBOrderId>201501292002149038</TBOrderId>
+					</SubOrder>
+				</SubOrderList>
+			</Order>
+		</Request>
+		<Sign>N12O766is77ZIcFPRS_OmTVOFgJ9I7P8rqN2Tu77kfhbhLfAuDrBP3abv4PMKBpuPpT-CayjUXlRkveJVuV14ml5ZZHDW6rY0TrG7RGTh7y9kvTtroM4LuGtFN7LctbXSxyL_rp9lo8J3cO5NyAknSL3_jjDl_iyZMpBozItzLU</Sign>
+	</Package>
+</PackageList>
+
+```
+###3.10.2返回报文
+申请核保接口返回三个状态：
+1.核保成功，返回投保单号。
+2.核保中，在核保流程中
+3.核保失败，返回核保失败原因
+
+返回参数
+<table>
+   <tr>
+      <td>TBOrderId</td>
+      <td>第三方总订单号</td>
+      <td>此订单号在请求中出现3次</td>
+   </tr>
+   <tr>
+      <td>1.第三方总订单号</td>
+   </tr>
+   <tr>
+      <td>2.第三方商业订单号</td>
+   </tr>
+   <tr>
+      <td>3.第三方交强订单号</td>
+   </tr>
+   <tr>
+      <td>ProposalNo</td>
+      <td>保险公司投保单号</td>
+      <td>1. 商业投保单号 2.交强投保单号</td>
+   </tr>
+   <tr>
+      <td>ItemId</td>
+      <td>第三方商品ID</td>
+      <td>第三方商品ID</td>
+   </tr>
+   <tr>
+      <td>forcePremium</td>
+      <td>交强保费</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>vehicleTaxPremium</td>
+      <td>车船税</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>bizTotalPremium</td>
+      <td>商业总保费</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>standardPremium</td>
+      <td>市场价</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>totalPremium</td>
+      <td>网购价</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>IsIdVerifi</td>
+      <td>是否需要身份证验证</td>
+      <td>1:需要,0:不需要</td>
+   </tr>
+</table>
+```xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<version>2</version>
+			<RequestType>120</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501292002149038</SessionId>
+			<SellerId>3597746367</SellerId>
+			<SendTime>2015-01-29 21:54:16</SendTime>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Sign>Ii_nCYzOxSznAxpGR-YuJXjyi3fg1pLW4FfUvUkQdF67i3p6ohjCETEevYApxGNYjw3X9bPeG-nu1QUK6mNO3pWaJGuSD0ekXGyOVuMQI8BGoS8C-wXr6b1E5qgloi_VuavuAvZUd_is67IOhYmgVAvZfoHGsEqZiEcWkAcLoXs</Sign>
+		<Response>
+			<TagsList>
+				<Tags>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">forcePremium</Definition>
+						<Definition name="label">交强险费</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="premium">95000</Definition>
+					</Tag>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">vehicleTaxPremium</Definition>
+						<Definition name="label">车船税费</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="premium">0</Definition>
+					</Tag>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">bizTotalPremium</Definition>
+						<Definition name="label">商业总保费</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="premium">220024</Definition>
+					</Tag>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">totalPremium</Definition>
+						<Definition name="label">网购总价</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="premium">315024</Definition>
+					</Tag>
+				</Tags>
+			</TagsList>
+			<Order>
+				<TBOrderId>201501292002149038</TBOrderId>
+				<SubOrderList>
+					<SubOrder type="biz">
+						<TBOrderId>201501292002149038</TBOrderId>
+						<ProposalNo>T085105092015000115</ProposalNo>
+					</SubOrder>
+					<SubOrder type="force">
+						<TBOrderId>201501292002149038</TBOrderId>
+						<ProposalNo>T085105072015000113</ProposalNo>
+					</SubOrder>
+				</SubOrderList>
+			</Order>
+            <IsIdVerifi>1</IsIdVerifi>
+		</Response>
+	</Package>
+</PackageList>
+```
+其他参考获取报价表单（100）接口。
+
+##3.11配送信息修改接口
+申请核保中提交修改配送信息接口返回的报文信息。
+###3.11.1请求报文
+
+<table>
+   <tr>
+      <td>字段</td>
+      <td>描述</td>
+      <td>类型</td>
+      <td>是否可为空</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>配送信息（deliveryInfo）</td>
+   </tr>
+   <tr>
+      <td>addresseeName</td>
+      <td>收件人姓名</td>
+      <td>String</td>
+      <td>否</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>addresseeMobile</td>
+      <td>收件人手机</td>
+      <td>String</td>
+      <td>否</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>sendDate</td>
+      <td>配送时间</td>
+      <td>String</td>
+      <td>否</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>addresseeProvince</td>
+      <td>省份代码</td>
+      <td>String</td>
+      <td>否</td>
+      <td>由阳光提供见下说明</td>
+   </tr>
+   <tr>
+      <td>addresseeCity</td>
+      <td>城市代码</td>
+      <td>String</td>
+      <td>否</td>
+      <td>由阳光提供见下说明</td>
+   </tr>
+   <tr>
+      <td>addresseeTown</td>
+      <td>区县代码</td>
+      <td>String</td>
+      <td>否</td>
+      <td>由阳光提供见下说明</td>
+   </tr>
+   <tr>
+      <td>addresseeDetails</td>
+      <td>收件地址</td>
+      <td>String</td>
+      <td>否</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>insuredaddresseeDetails</td>
+      <td>被保人身份证地址</td>
+      <td>String</td>
+      <td>否</td>
+      <td>需和身份证一致</td>
+   </tr>
+</table>
+
+配送信息说明：
+收件地址为3级联动，具体省市区由阳光提供，用jsonp解决ajax跨域请求.
+
+http://chexian.sinosig.com/Net/nCityInfoAction!getRegionListByParentCodeForInterface.action?province=0&encoding=GBK&callback=jsonp1045
+
+其中province值为上级的代码，province=0时取全部省
+```json
+[
+    {
+        "TITLE": "北京", 
+        "CODE": "11"
+    }, 
+    {
+        "TITLE": "天津", 
+        "CODE": "12"
+    }, 
+    {
+        "TITLE": "河北省", 
+        "CODE": "13"
+    }, 
+    {
+        "TITLE": "山西省", 
+        "CODE": "14"
+    }, 
+    {
+        "TITLE": "内蒙古自治区", 
+        "CODE": "15"
+    }, 
+    {
+        "TITLE": "辽宁省", 
+        "CODE": "21"
+    }, 
+    {
+        "TITLE": "吉林省", 
+        "CODE": "22"
+    }, 
+    {
+        "TITLE": "黑龙江省", 
+        "CODE": "23"
+    }, 
+    {
+        "TITLE": "上海市", 
+        "CODE": "31"
+    }, 
+    {
+        "TITLE": "江苏省", 
+        "CODE": "32"
+    }, 
+    {
+        "TITLE": "浙江省", 
+        "CODE": "33"
+    }, 
+    {
+        "TITLE": "安徽省", 
+        "CODE": "34"
+    }, 
+    {
+        "TITLE": "福建省", 
+        "CODE": "35"
+    }, 
+    {
+        "TITLE": "江西省", 
+        "CODE": "36"
+    }, 
+    {
+        "TITLE": "山东省", 
+        "CODE": "37"
+    }, 
+    {
+        "TITLE": "河南省", 
+        "CODE": "41"
+    }, 
+    {
+        "TITLE": "湖北省", 
+        "CODE": "42"
+    }, 
+    {
+        "TITLE": "湖南省", 
+        "CODE": "43"
+    }, 
+    {
+        "TITLE": "广东省", 
+        "CODE": "44"
+    }, 
+    {
+        "TITLE": "广西壮族自治区", 
+        "CODE": "45"
+    }, 
+    {
+        "TITLE": "海南省", 
+        "CODE": "46"
+    }, 
+    {
+        "TITLE": "重庆市", 
+        "CODE": "50"
+    }, 
+    {
+        "TITLE": "四川省", 
+        "CODE": "51"
+    }, 
+    {
+        "TITLE": "贵州省", 
+        "CODE": "52"
+    }, 
+    {
+        "TITLE": "云南省", 
+        "CODE": "53"
+    }, 
+    {
+        "TITLE": "西藏自治区", 
+        "CODE": "54"
+    }, 
+    {
+        "TITLE": "陕西省", 
+        "CODE": "61"
+    }, 
+    {
+        "TITLE": "甘肃省", 
+        "CODE": "62"
+    }, 
+    {
+        "TITLE": "青海省", 
+        "CODE": "63"
+    }, 
+    {
+        "TITLE": "宁夏回族自治区", 
+        "CODE": "64"
+    }, 
+    {
+        "TITLE": "新疆维吾尔自治区", 
+        "CODE": "65"
+    }
+]
+```
+其中
+TITLE ：省市区的名字
+CODE：省市区代码 需回传阳光
+```xml
+<?xml version='1.0' encoding='GBK' standalone='yes'?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>135</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501292002149038</SessionId>
+			<From>MobileCar</From>
+			<To>Server</To>
+			<AgentCode>W02400654</AgentCode>
+			<SendTime>2015-01-29 21:54:09</SendTime>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Request>
+			<InputsList>
+				<Inputs type='deliverInfo'>
+					<input name='sendDate'></input>
+					<input name='addresseeName'>日日通</input>
+					<input name='addresseeMobile'>18511565612</input>
+					<input name='addresseeProvince'>11</input>
+					<input name='addresseeCity'>1101</input>
+					<input name='addresseeTown'>110101</input>
+					<input name='insuredaddresseeDetails'>北京 市辖区 东城区 为人为认为</input>
+					<input name='addresseeDetails'>北京 市辖区 东城区 为人为认为</input>
+				</Inputs>
+		</Request>
+		<Sign>N12O766is77ZIcFPRS_OmTVOFgJ9I7P8rqN2Tu77kfhbhLfAuDrBP3abv4PMKBpuPpT-CayjUXlRkveJVuV14ml5ZZHDW6rY0TrG7RGTh7y9kvTtroM4LuGtFN7LctbXSxyL_rp9lo8J3cO5NyAknSL3_jjDl_iyZMpBozItzLU</Sign>
+	</Package>
+</PackageList>
+
+```
+###3.11.2返回报文
+修改配送信息接口返回两个状态：
+1、	修改成功，返回status为100。
+2、	修改失败，返回失败信息
+修改成功报文;
+```xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<version>2</version>
+			<RequestType>135</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501292002149038</SessionId>
+			<SellerId>3597746367</SellerId>
+			<SendTime>2015-01-29 21:54:16</SendTime>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Sign>Ii_nCYzOxSznAxpGR-YuJXjyi3fg1pLW4FfUvUkQdF67i3p6ohjCETEevYApxGNYjw3X9bPeG-nu1QUK6mNO3pWaJGuSD0ekXGyOVuMQI8BGoS8C-wXr6b1E5qgloi_VuavuAvZUd_is67IOhYmgVAvZfoHGsEqZiEcWkAcLoXs</Sign>
+		<Response>
+		</Response>
+	</Package>
+</PackageList>
+
+修改失败报文：
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<version>2</version>
+			<RequestType>135</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501292002149038</SessionId>
+			<SellerId>3597746367</SellerId>
+			<SendTime>2015-01-29 21:54:16</SendTime>
+			<Status>400</Status>
+			<ErrorMessage>亲，您选择的配送信息修改失败了!!!</ErrorMessage>
+		</Header>
+		<Sign>Ii_nCYzOxSznAxpGR-YuJXjyi3fg1pLW4FfUvUkQdF67i3p6ohjCETEevYApxGNYjw3X9bPeG-nu1QUK6mNO3pWaJGuSD0ekXGyOVuMQI8BGoS8C-wXr6b1E5qgloi_VuavuAvZUd_is67IOhYmgVAvZfoHGsEqZiEcWkAcLoXs</Sign>
+		<Response>
+		</Response>
+	</Package>
+</PackageList>
+```
+##3.12支付检查接口
+在支付前第三方调用保险公司支付检查接口，验证投保单是否可以支付，验证参数通过第三方订单号，商业险投保单号和交强险投保单号，如果是单保一个产品，只有一个投保单号。
+
+###3.12.1请求报文
+<table>
+   <tr>
+      <td>TBOrderId</td>
+      <td>第三方总订单号</td>
+      <td>此订单号在请求中出现3次</td>
+   </tr>
+   <tr>
+      <td>1.第三方总订单号</td>
+   </tr>
+   <tr>
+      <td>2.第三方商业订单号</td>
+   </tr>
+   <tr>
+      <td>3.第三方交强订单号</td>
+   </tr>
+   <tr>
+      <td>ProposalNo</td>
+      <td>保险公司投保单号</td>
+      <td>1. 商业投保单号 2.交强投保单号</td>
+   </tr>
+   <tr>
+      <td>ItemId</td>
+      <td>第三方商品ID</td>
+      <td>第三方商品ID</td>
+   </tr>
+</table>
+```xml
+<?xml version='1.0' encoding='GBK' standalone='yes'?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>125</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501292002149038</SessionId>
+			<From>MobileCar</From>
+			<To>Server</To>
+			<AgentCode>W02400654</AgentCode>
+			<SendTime>2015-01-29 21:54:17</SendTime>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Request>
+			<Order>
+				<TBOrderId>201501292002149038</TBOrderId>
+				<SubOrderList>
+					<SubOrder type='force'>
+						<TBOrderId>201501292002149038</TBOrderId>
+					</SubOrder>
+					<SubOrder type='biz'>
+						<TBOrderId>201501292002149038</TBOrderId>
+					</SubOrder>
+				</SubOrderList>
+			</Order>
+		</Request>
+		<Sign>YCW8U_0QebBdwd_2KrZ7yDB1q8E-Z72Ps52J-az4-08OywCJoNdLlKoWoHXpiC3OJ_CmUzIW_pBIZosYIluWIJPHiTbn8qs2CLzcEiiqWJCAw41VD9GLPA-F1KVMTbTqi7qe9FjZXoYWggR5uVZo5KHPG47ITjKYNIR0ltrKtXE</Sign>
+	</Package>
+</PackageList>
+```
+###3.12.2返回报文
+在支付检查接口中，保险公司检查是否可以支付时，如果发现已经不能支付，比如超过支付时间，脱保等，可以重新核保，返回给客户支付，也可以返回无法支付状态
+1.成功，可以支付
+2.确认中，保险公司可能在重新核保，需要核保通过后会
+3.失败，无法支付
+
+```xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Package>
+		<Header>
+			<version>2</version>
+			<RequestType>125</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>201501292002149038</SessionId>
+			<SellerId>3597746367</SellerId>
+			<SendTime>2015-01-29 21:54:18</SendTime>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+		</Header>
+		<Sign>PVF-R6JE-DqYF4olA0oButP2nhukhFDrYYKSZaCocfRE4VB7gepEWdjJuIjLttIeef4bX_lhDHSVIMIe532NgEzAsHCPk1fdcSWNOITzYFCMF2rttD9Q_V78aRqRDcybTAfOieBUoEwQoVOgzQWwVoGvvAC5OSH6fY37RyiG14k</Sign>
+		<Response>
+			<TagsList>
+				<Tags>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">forcePremium</Definition>
+						<Definition name="label">交强险费</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="premium">95000</Definition>
+					</Tag>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">vehicleTaxPremium</Definition>
+						<Definition name="label">车船税费</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="premium">0</Definition>
+					</Tag>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">bizTotalPremium</Definition>
+						<Definition name="label">商业总保费</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="premium">220024</Definition>
+					</Tag>
+					<Tag>
+						<Definition name="type">label</Definition>
+						<Definition name="key">totalPremium</Definition>
+						<Definition name="label">网购总价</Definition>
+						<Definition name="value"></Definition>
+						<Definition name="premium">315024</Definition>
+					</Tag>
+				</Tags>
+			</TagsList>
+			<Order>
+				<TBOrderId>201501292002149038</TBOrderId>
+				<Premium>315024</Premium>
+				<PayNo></PayNo>
+				<SubOrderList>
+					<SubOrder type="biz">
+						<TBOrderId>201501292002149038</TBOrderId>
+						<ProposalNo>T085105092015000115</ProposalNo>
+						<Premium>220024</Premium>
+					</SubOrder>
+					<SubOrder type="force">
+						<TBOrderId>201501292002149038</TBOrderId>
+						<ProposalNo>T085105072015000113</ProposalNo>
+						<Premium>95000</Premium>
+					</SubOrder>
+				</SubOrderList>
+			</Order>
+		</Response>
+	</Package>
+</PackageList>
+```
+其他参考获取报价表单（100）接口。
+##3.13获取验证码接口(126)
+在120中新增加节点IsIdVerifi,如果120返回报文中,IsIdVerifi为1则直接调用127接口进行验证即可,无需调用此接口,只有在短信未发送到用户手机或用户多次输入验证码错误,需要重新获取验证码的时候才调用此接口.
+###3.13.1请求报文
+Request节点中 无参数
+```xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList>
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>126</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>SMG2014911334938732400740</SessionId>
+			<AgentCode>W02400652</AgentCode>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+			<SendTime>2014-09-11 13:49:05</SendTime>
+		</Header>
+		<Request>
+		</Request>	<Sign>KVZnM_TQMvDUcGQDI9Zs7kEnQZvoZiapyeoxm9gDS6MdQwPghuvI3LvjM7Gp42mY9pssmG-ounM-_Y2VfdH0u8z-b6QVJxO5b7npv5GSRxvvkRKxhWxxbxg1glcVAnnb-zum_JFqz-PCclLX4E6t-g2Q_6rDlGG-UoeoSfQ0Mr8
+		</Sign>
+	</Package>
+</PackageList>
+
+```
+###3.13.2返回报文
+<table>
+   <tr>
+      <td>字段</td>
+      <td>名称</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>ResponseCode</td>
+      <td>获取验证码结果</td>
+      <td>success获取成功,其它为失败</td>
+   </tr>
+   <tr>
+      <td>ResponseMessage</td>
+      <td>获取验证码信息</td>
+      <td>失败原因</td>
+   </tr>
+</table>
+```xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList>
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>126</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>SMG2014911334938732400740</SessionId>
+			<AgentCode>W02400652</AgentCode>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+			<SendTime>2014-09-11 13:49:05</SendTime>
+		</Header>
+	<Sign>euPBGXG9-1MNLQ3jw62rFuY4_GPc-M86_TnqO5u8fD2MJ9tpZdUXEW2AdEKsoYNw5myFrw4boNOJsdZH43Lh2E3IKEQAa5QAJ8kJouKhgDoMFtN_JWEN3Xj0C_WjqTqX3Eu-lygHbphMgBVFPpcY-54WskjbMCx3lJJFgIwl2Ug</Sign>
+	<Response>
+		<ResponseCode>success</ResponseCode>
+        <ResponseMessage>失败原因</ResponseMessage>
+	</Response>
+	</Package>
+</PackageList>
+
+```
+##3.14保存验证码（127）
+<table>
+   <tr>
+      <td>字段</td>
+      <td>名称</td>
+      <td>类型</td>
+      <td>大小</td>
+      <td>必传</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>IssueCode</td>
+      <td>验证码</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td>用户输入的验证码</td>
+   </tr>
+</table>
+###3.14.1请求报文
+```xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList>
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>127</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>SMG2014911334938732400740</SessionId>
+			<AgentCode>W02400652</AgentCode>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+			<SendTime>2014-09-11 13:49:05</SendTime>
+		</Header>
+		<Request>
+			<IssueCode>14658</IssueCode> 
+		</Request>	<Sign>KVZnM_TQMvDUcGQDI9Zs7kEnQZvoZiapyeoxm9gDS6MdQwPghuvI3LvjM7Gp42mY9pssmG-ounM-_Y2VfdH0u8z-b6QVJxO5b7npv5GSRxvvkRKxhWxxbxg1glcVAnnb-zum_JFqz-PCclLX4E6t-g2Q_6rDlGG-UoeoSfQ0Mr8
+		</Sign>
+	</Package>
+</PackageList>
+```
+###3.14.2返回报文(与126返回报文相同)
+<table>
+   <tr>
+      <td>字段</td>
+      <td>名称</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>ResponseCode</td>
+      <td>获取验证码结果</td>
+      <td>success获取成功,其它为失败</td>
+   </tr>
+   <tr>
+      <td>ResponseMessage</td>
+      <td>获取验证码信息</td>
+      <td>失败原因</td>
+   </tr>
+</table>
+```xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList>
+	<Package>
+		<Header>
+			<Version>2</Version>
+			<RequestType>126</RequestType>
+			<InsureType>100</InsureType>
+			<SessionId>SMG2014911334938732400740</SessionId>
+			<AgentCode>W02400652</AgentCode>
+			<SellerId>3597746367</SellerId>
+			<Status>100</Status>
+			<ErrorMessage></ErrorMessage>
+			<SendTime>2014-09-11 13:49:05</SendTime>
+		</Header>
+		<Sign>euPBGXG9-1MNLQ3jw62rFuY4_GPc-M86_TnqO5u8fD2MJ9tpZdUXEW2AdEKsoYNw5myFrw4boNOJsdZH43Lh2E3IKEQAa5QAJ8kJouKhgDoMFtN_JWEN3Xj0C_WjqTqX3Eu-lygHbphMgBVFPpcY-54WskjbMCx3lJJFgIwl2Ug</Sign>
+	<Response>
+		<ResponseCode>success</ResponseCode>
+        <ResponseMessage>失败原因</ResponseMessage>
+	</Response>
+	</Package>
+</PackageList>
+
+```
+##3.15承保接口
+支付信息(Payment)：
+<table>
+   <tr>
+      <td>字段</td>
+      <td>名称</td>
+      <td>类型</td>
+      <td>大小</td>
+      <td>必传</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>TBOrderId</td>
+      <td>第三方订单号</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>PayOrderId</td>
+      <td>支付平台订单号</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>CheckPayNo</td>
+      <td>支付流水号</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td>形如</td>
+   </tr>
+   <tr>
+      <td>B5000M386466139260786</td>
+   </tr>
+   <tr>
+      <td>T1100P205700608474850</td>
+   </tr>
+   <tr>
+      <td>PayType</td>
+      <td>支付商类型</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td>如：01。注：支付宝是01，快钱02等。其他支付类型待确定。</td>
+   </tr>
+   <tr>
+      <td>PartnerId</td>
+      <td>支付时所用的支付商的对应的合作者ID</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td>如：2088601078742391，和PayType相对应。如果PayType为01。PartnerId则是阳光在支付宝平台账户的Id。</td>
+   </tr>
+   <tr>
+      <td>PayTime</td>
+      <td>支付时间</td>
+      <td>时间</td>
+      <td></td>
+      <td>Y</td>
+      <td>yyyy-MM-dd HH:mm:ss</td>
+   </tr>
+   <tr>
+      <td>PayMoney</td>
+      <td>支付金额</td>
+      <td>数值</td>
+      <td></td>
+      <td>Y</td>
+      <td>以分为单位</td>
+   </tr>
+   <tr>
+      <td>AccountDate</td>
+      <td>账务日期</td>
+      <td>时间</td>
+      <td></td>
+      <td>Y</td>
+      <td>同支付日期 yyyy-MM-dd</td>
+   </tr>
+   <tr>
+      <td>AlipayBuyerAccount</td>
+      <td>支付帐号</td>
+      <td>字符</td>
+      <td></td>
+      <td>N</td>
+      <td>如：zyhuai@wo.com.cn</td>
+   </tr>
+   <tr>
+      <td>AlipayBuyerId</td>
+      <td>支付帐号ID</td>
+      <td>字符</td>
+      <td></td>
+      <td>N</td>
+      <td>如：2088002566423974</td>
+   </tr>
+   <tr>
+      <td>TBOrderId</td>
+      <td>第三方总订单号</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td>如：415468917875548</td>
+   </tr>
+   <tr>
+      <td>ProposalNo</td>
+      <td>保险公司保单号</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td>如：T341005072013000023</td>
+   </tr>
+   <tr>
+      <td>Premium</td>
+      <td>保费</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td>如：339059</td>
+   </tr>
+   <tr>
+      <td>ItemId</td>
+      <td>第三方商品ID</td>
+      <td>字符</td>
+      <td></td>
+      <td>Y</td>
+      <td>如：2000036117417</td>
+   </tr>
+</table>
+
+###3.15.1请求报文
+```xml
+<?xml version="1.0" encoding="GBK" standalone="yes"?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Package>
+    <Header>
+      <Version>2</Version>
+      <InsureType></InsureType>
+      <RequestType>130/RequestType>
+      <SessionId>33763110891482088102118850914</SessionId>
+      <From>taobao</From>
+      <To>2051078519</To>
+      <AgentCode>W03210001</AgentCode>
+      <SendTime>2013-04-24 18:28:42</SendTime>
+      <Status></Status>
+      <ErrorMessage></ErrorMessage>
+    </Header>
+    <Request>
+      <Payment>
+        <TBOrderId>3376311089148</TBOrderId>
+        <PayOrderId>2013022600001000910000069408</PayOrderId>
+        <CheckPayNo>B5000M386466139260786</CheckPayNo>
+        <PayType>01</PayType>
+        <PartnerId>2088601078742391</PartnerId>
+        <PayTime>2013-02-26 10:43:19</PayTime>
+        <PayMoney>1000000</PayMoney>
+        <AccountDate>2013-02-26 10:43:19</AccountDate>
+        <AlipayBuyerAccount>13524726578</AlipayBuyerAccount>
+        <AlipayBuyerId>2088102118850914</AlipayBuyerId>
+      </Payment>
+      <Order>
+        <TBOrderId>3376311089148</TBOrderId>
+        <Premium>339059</Premium> 
+        <SubOrderList>
+		  <SubOrder type="biz">
+            <TBOrderId>3376311089149</TBOrderId>
+            <ItemId>26790524332</ItemId>
+            <Premium>139059</Premium>
+            <ProposalNo>8828900000144888</ProposalNo>
+          </SubOrder>
+		  <SubOrder type="force">
+            <TBOrderId>3376311089139</TBOrderId>
+            <ItemId>26790524332</ItemId>
+            <Premium>200000</Premium>
+            <ProposalNo>8828900000144889</ProposalNo>
+          </SubOrder>
+        </SubOrderList>
+      </Order>
+</Request>
+    <Sign></Sign>
+  </Package>
+</PackageList>
+```
+###3.15.2返回报文
+返回参数
+<table>
+   <tr>
+      <td>TBOrderId</td>
+      <td>第三方总订单号</td>
+      <td>此订单号在请求中出现3次</td>
+   </tr>
+   <tr>
+      <td>1.第三方总订单号</td>
+   </tr>
+   <tr>
+      <td>2.第三方商业订单号</td>
+   </tr>
+   <tr>
+      <td>3.第三方交强订单号</td>
+   </tr>
+   <tr>
+      <td>ProposalNo</td>
+      <td>保险公司投保单号</td>
+      <td>1. 商业投保单号 2.交强投保单号</td>
+   </tr>
+   <tr>
+      <td>PolicyNo</td>
+      <td>保险公司保单号</td>
+      <td>保险公司保单号</td>
+   </tr>
+</table>
+```xml
+<?xml version="1.0" encoding="GBK"?>
+<PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Package>
+    <Header>
+      <Version>2</Version>
+      <InsureType>100</InsureType>
+      <RequestType>130</RequestType>
+      <SessionId>33763110891482088102118850914</SessionId>
+      <From>taobao</From>
+      <To>2051078519</To>
+      <SendTime>2013-04-24 18:28:42</SendTime>
+      <Status>2</Status>
+      <ErrorMessage>2</ErrorMessage>
+    </Header>
+    <Sign></Sign>
+    <Response>
+      <Order>
+        <TBOrderId>3376311089148</TBOrderId>
+        <SubOrderList>
+          <SubOrder type="biz">
+          <TBOrderId>3376311089149</TBOrderId>
+          <ProposalNo>8828900000144888</ProposalNo>
+          <PolicyNo>8828900000144888</PolicyNo>
+        </SubOrder>
+        <SubOrder type="force">
+          <TBOrderId>3376311089139</TBOrderId>
+          <ProposalNo>8828900000144888</ProposalNo>
+          <PolicyNo>8828900000144889</PolicyNo>
+        </SubOrder>
+      </SubOrderList>
+     </Order>
+   </Response>
+  </Package>
+</PackageList>
+```
+其他参考获取报价表单（100）接口。
+#4.附录表
+
+##4.1附录表1 投保输入项
+<table>
+   <tr>
+      <td>字段</td>
+      <td>描述</td>
+      <td>类型</td>
+      <td>是否为空</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>cityCode</td>
+      <td>城市代码</td>
+      <td>Label</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>车辆信息（vehicleInfo）</td>
+   </tr>
+   <tr>
+      <td>licenseNo</td>
+      <td>车牌号</td>
+      <td>Text</td>
+      <td></td>
+      <td>新车为空</td>
+   </tr>
+   <tr>
+      <td>noLicenseFlag</td>
+      <td>新车未上牌</td>
+      <td>Checkbox</td>
+      <td></td>
+      <td>1：新车，0：非新车</td>
+   </tr>
+   <tr>
+      <td>firstRegisterDate</td>
+      <td>车辆初等日期</td>
+      <td>Date</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>vehicleId</td>
+      <td>车辆Id</td>
+      <td>Hidden</td>
+      <td></td>
+      <td>客户车型Id，</td>
+   </tr>
+   <tr>
+      <td>vehicleModelName</td>
+      <td>车辆品牌型号</td>
+      <td>Text</td>
+      <td></td>
+      <td>根据客户输入的信息到保险公司查询车辆信息</td>
+   </tr>
+   <tr>
+      <td>vehicleFrameNo</td>
+      <td>车架号</td>
+      <td>text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>engineNo</td>
+      <td>发动机号</td>
+      <td>text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>transferFlag</td>
+      <td>是否过户车</td>
+      <td>Radio</td>
+      <td></td>
+      <td>1：是，0：否</td>
+   </tr>
+   <tr>
+      <td>transferDate</td>
+      <td>过户日期</td>
+      <td>Date</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>vehicleInvoiceDate</td>
+      <td>购车发票日期</td>
+      <td>Date</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>runCardCertificateDate</td>
+      <td>行驶证发证日期</td>
+      <td>Date</td>
+      <td></td>
+      <td>行驶证发证时间</td>
+   </tr>
+   <tr>
+      <td>bizBeginDate</td>
+      <td>商业险保险起期</td>
+      <td>Date</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>forceBeginDate</td>
+      <td>交强险保险起期</td>
+      <td>Date</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>车主信息（ownerInfo）</td>
+   </tr>
+   <tr>
+      <td>ownerName</td>
+      <td>车主姓名</td>
+      <td>Label</td>
+      <td></td>
+      <td>车主姓名</td>
+   </tr>
+   <tr>
+      <td>ownerIdType</td>
+      <td>车主证件类型</td>
+      <td>Select</td>
+      <td></td>
+      <td>车主证件类型</td>
+   </tr>
+   <tr>
+      <td>ownerIdNo</td>
+      <td>车主证件号码</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>ownerGender</td>
+      <td>车主性别</td>
+      <td>Radio</td>
+      <td></td>
+      <td>证件类型非身份证时需要</td>
+   </tr>
+   <tr>
+      <td>ownerBirthday</td>
+      <td>车主生日</td>
+      <td>Date</td>
+      <td></td>
+      <td>证件类型非身份证时需要</td>
+   </tr>
+   <tr>
+      <td>ownerAge</td>
+      <td>车主年龄</td>
+      <td>Text</td>
+      <td></td>
+      <td>备用字段</td>
+   </tr>
+   <tr>
+      <td>ownerMobile</td>
+      <td>车主手机</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>ownerEmail</td>
+      <td>车主邮箱</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>投保人信息（applicantInfo）</td>
+   </tr>
+   <tr>
+      <td>applicantName</td>
+      <td>投保人姓名</td>
+      <td>Label</td>
+      <td></td>
+      <td>投保人姓名</td>
+   </tr>
+   <tr>
+      <td>applicantIdType</td>
+      <td>投保人证件类型</td>
+      <td>Select</td>
+      <td></td>
+      <td>投保人证件类型</td>
+   </tr>
+   <tr>
+      <td>applicantIdNo</td>
+      <td>投保人证件号码</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>applicantGender</td>
+      <td>投保人性别</td>
+      <td>Radio</td>
+      <td></td>
+      <td>证件类型非身份证时需要</td>
+   </tr>
+   <tr>
+      <td>applicantBirthday</td>
+      <td>投保人生日</td>
+      <td>Date</td>
+      <td></td>
+      <td>证件类型非身份证时需要</td>
+   </tr>
+   <tr>
+      <td>applicantMobile</td>
+      <td>车主手机</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>applicantEmail</td>
+      <td>车主邮箱</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>被保险人（insuredInfo）</td>
+   </tr>
+   <tr>
+      <td>insuredName</td>
+      <td>被保险人姓名</td>
+      <td>Label</td>
+      <td></td>
+      <td>被保险人姓名</td>
+   </tr>
+   <tr>
+      <td>insuredIdType</td>
+      <td>被保险人证件类型</td>
+      <td>Select</td>
+      <td></td>
+      <td>被保险人证件类型</td>
+   </tr>
+   <tr>
+      <td>insuredIdNo</td>
+      <td>被保险人证件号码</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>insuredGender</td>
+      <td>被保险人性别</td>
+      <td>Radio</td>
+      <td></td>
+      <td>证件类型非身份证时需要</td>
+   </tr>
+   <tr>
+      <td>insuredBirthday</td>
+      <td>被保险人生日</td>
+      <td>Date</td>
+      <td></td>
+      <td>证件类型非身份证时需要</td>
+   </tr>
+   <tr>
+      <td>insuredMobile</td>
+      <td>被保险人手机</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>insuredEmail</td>
+      <td>被保险人邮箱</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>配送信息（deliveryInfo）</td>
+   </tr>
+   <tr>
+      <td>addresseeName</td>
+      <td>收件人姓名</td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>addresseeMobile</td>
+      <td>收件人手机</td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>sendDate</td>
+      <td>配送时间</td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>invoice</td>
+      <td>发票抬头</td>
+      <td>text</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>addresseeProvince</td>
+      <td>省份代码</td>
+      <td>Select</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>addresseeCity</td>
+      <td>城市代码</td>
+      <td>Select</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>addresseeTown</td>
+      <td>区县代码</td>
+      <td>select</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>addresseeDetails</td>
+      <td>收件地址</td>
+      <td>Text</td>
+      <td></td>
+      <td></td>
+   </tr>
+</table>
+#5.特别说明
+注意事项
+1：所有报文交互中涉及保费和支付金额等节点都是以分为单位，
+如保费是100元，报文的节点是10000
+```xml
+<Tag>
+            <Definition name="type">label</Definition>
+            <Definition name="key">covOd</Definition>
+            <Definition name="lable">车险损失综合险</Definition>
+            <Definition name="value">50万</Definition>
+<Definition name="premium">10000</Definition>
+<Definition name="disable">0</Definition>
+<Definition name="check"></Definition>
+            <Definition name="dataUrl"><![CDATA[]]></Definition>
+            <Definition name="checkUrl"><![CDATA[]]></Definition>
+          </Tag>
+      <Tag>
+                  <Definition name="type">label</Definition>
+                  <Definition name="label">商业总保费</Definition>
+                  <Definition name="key">bizTotalPremium</Definition>
+                  <Definition name="value">139059</Definition>
+                  <Definition name="premium">139059</Definition>
+               </Tag>
+               <Tag>
+                  <Definition name="type">label</Definition>
+                  <Definition name="label">市场总价</Definition>
+                  <Definition name="key">standardPremium</Definition>
+                  <Definition name="value">428210</Definition>
+                  <Definition name="premium">428210</Definition>
+               </Tag>
+               <Tag>
+                  <Definition name="type">label</Definition>
+                  <Definition name="label">网购总价</Definition>
+                  <Definition name="key">totalPremium</Definition>
+                  <Definition name="value">230644</Definition>
+                  <Definition name="premium">230644</Definition>
+               </Tag>
+```
+如下节点，都是以分为单位。
+```xml
+<Definition name="premium">10000</Definition>
+
+<Premium>230643</Premium>
+
+<payMoney>1000000<payMoney>
+```
