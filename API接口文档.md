@@ -313,17 +313,9 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
       <td>状态</td>
       <td>字符</td>
       <td>Y</td>
-      <td>参考数据字典</td>
+      <td>参考数据字典<br>100-正常<br>200-需要补录<br>其他异常（300、400）</td>
    </tr>
-   <tr>
-      <td>100-正常</td>
-   </tr>
-   <tr>
-      <td>200-需要补录</td>
-   </tr>
-   <tr>
-      <td>其他异常（300、400）</td>
-   </tr>
+   
    <tr>
       <td>8</td>
       <td>ErrorMessage</td>
@@ -390,3 +382,149 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
    </tr>
 </table>
 
+注：接口平台生成签名，用java非对称加密方式。详情参考附件加密说明。
+
+###3.2.3报文体
+
+报文体是报文的主要数据承载体，报文体很多控件组成，一组控件代表不同的含义。报文体体分请求报文体和返回报文体，请求报文体包含在<Request></Request>里，返回报文包含在<Response></Response>里
+请求报文体（Request）：
+
+<table>
+   <tr>
+      <td>No.</td>
+      <td>字段</td>
+      <td>含义</td>
+      <td>类型</td>
+      <td>属性</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>InputsList</td>
+      <td>用户录入信息集</td>
+      <td>控件</td>
+      <td></td>
+      <td>InputsList由多个Inputs构成。多个Inputs会根据出现在报文里面的先后顺序展现到页面</td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>Inputs</td>
+      <td>用户录入信息</td>
+      <td>控件</td>
+      <td>type：自定义模块名</td>
+      <td>用户输入的信息，都会以Input方式传给保险公司，Input的name为保险公司指定的值，Input的value为用户填写的值</td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>Order</td>
+      <td>第三方的订单信息</td>
+      <td>控件</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>4</td>
+      <td>Payment</td>
+      <td>第三方支付单信息</td>
+      <td>控件</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+   </tr>
+</table>
+
+返回报文体（Response）
+
+<table>
+   <tr>
+      <td>No.</td>
+      <td>字段</td>
+      <td>含义</td>
+      <td>类型</td>
+      <td>属性</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>TagsList</td>
+      <td>控件定义信息集合</td>
+      <td>控件</td>
+      <td></td>
+      <td>由多个Tags组成，如果有多个Tags，将会根据报文的信息展示，不同的Tags类型，会分块，与InputsList成对，一个TagsList会变成InputsList</td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>Tags</td>
+      <td>提供给用户录入信息的控件</td>
+      <td>控件</td>
+      <td>type：自定义模块名</td>
+      <td>由多个Tag组成，如果有多个Tag，将会按照报文的顺序展示，一个Tags会变成个Inputs回传给保险公司</td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>Tag</td>
+      <td>控件</td>
+      <td>控件</td>
+      <td>readonly：是否允许用户修改，取值true或者false</td>
+      <td>由多个Definition组成，一个Tag最中会变成一个Input回传给保险公司</td>
+   </tr>
+   <tr>
+      <td>4</td>
+      <td>Definition</td>
+      <td>控件描述信息</td>
+      <td>控件</td>
+      <td>type：控件类型</td>
+   </tr>
+   <tr>
+      <td>key：控件的key</td>
+   </tr>
+   <tr>
+      <td>lable：显示文字</td>
+   </tr>
+   <tr>
+      <td>value：默认值</td>
+   </tr>
+   <tr>
+      <td>data：初始数据</td>
+   </tr>
+   <tr>
+      <td>dataUrl：初始数据连接</td>
+   </tr>
+   <tr>
+      <td>checkUrl：数据验证地址</td>
+   </tr>
+   <tr>
+      <td>premium: 险别保费</td>
+   </tr>
+   <tr>
+      <td>range ：范围</td>
+      <td>type、key、lable是必选项，对于类似select这样的控件，data或者dataUrl应该是必须的</td>
+   </tr>
+   <tr>
+      <td></td>
+   </tr>
+   <tr>
+      <td>range:输入的值必须在这个知道范围内</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>Order</td>
+      <td>第三方订单信息</td>
+      <td>控件</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>6</td>
+      <td>Payment</td>
+      <td>第三方支付单信息</td>
+      <td>控件</td>
+      <td></td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+   </tr>
+</table>
