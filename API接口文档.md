@@ -613,7 +613,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
    </tr>
 </table>
 ###3.4.1请求报文
-``` xml
+```xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -646,7 +646,7 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
 ###3.4.2返回报文
 通过机构和车牌返回是否需要补录信息：
 如果需要补录（status节点为200）返回补录的节点，如果不需要（status节点为100）返回的数据：
-``` xml
+```xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -796,7 +796,7 @@ hotSign 为4:根据城市名称查询机构。queryCon为城市名称（不带�
  limit分页输入0即可
  
  返回示例：
- ``` javascript
+ ```json
  jsonp1045(
  
 [
@@ -915,7 +915,7 @@ spellingAcronym：城市拼音缩写
 
 cityPlate:城市车牌号前缀
 ###3.5.1请求报文
-``` xml
+```xml
 <?xml version='1.0' encoding='GBK' standalone='yes'?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Package>
@@ -1738,6 +1738,7 @@ counter:车辆信息总量；
       <td>生效时间(小时)</td>
    </tr>
 </table>
+
 ```xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
