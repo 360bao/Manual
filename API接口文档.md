@@ -1177,20 +1177,35 @@ cityPlate:城市车牌号前缀
 报文注释：
 >
 Tags表示一类型的输入项，把输入信息分类，方便准确填写信息，目前输入项分为车辆信息、车主信息、被保险人信息、配送信息和其他信息，其他信息主要指没有归类的输入项，比如车船税补充信息等。
+
 Tag标签是具体的输入项，每个需要填写的信息要一个tag标签。
+
 Definition是输入项属性的配置信息，有六种类型标示输入项的属性。
+
 type:标示输入项类型，有text，select，checkbox，radio，label,hidden或第三方定义的标签，其中label标示该标签为显示标签，只展示给用户看就可以了，不需要客户输入，但是不允许客户修改。
+
 key：指标签的名称，根据这个字段取value。
+
 lable：输入项的标题，
+
 disable: 1客户无法选择或输入，
+
 value: 输入项的默认值，如果没有默认值该项为空。
+
 premium: 保费,显示商业险责任的保费
-    check: 字段的校验规则，主要使用在text输入框
+
+check: 字段的校验规则，主要使用在text输入框
+
 dataUrl：输入项中输入的值需要到服务器上查询具体的信息，目前主要使用的地方是车型查询，客户输入车辆品牌，根据输入信息到车型库中查询车辆明细。
+
 checkUrl:输入项的验证功能，在输入项有复杂的验证时，没有办法在第三方那边配置，可以通过该值，客户输入完后焦点离开时会请求该地址，验证输入项是否合法，返回的是json格式数据，如果成功返回true，如果验证失败返回false和错误提示信息。
-	定义套餐：全面套餐，热门套餐和自由组合套餐。
-	保险公司可以根据自己定义的套餐返回，自由组合套餐是必返回，保险全部的责任和输入项，如果责任之间有关系在返回的套餐中定义。
-     如果报价异常或者需要中断流程，或者等待状态，返回相对应的报文，返回报文中Stauts节点设置为相对的值（300：拒保、400：中断流程），展示信息提示（ErrorMessages节点数据）。
+
+
+定义套餐：全面套餐，热门套餐和自由组合套餐。
+保险公司可以根据自己定义的套餐返回，自由组合套餐是必返回，保险全部的责任和输入项，如果责任之间有关系在返回的套餐中定义。
+如果报价异常或者需要中断流程，或者等待状态，返回相对应的报文，返回报文中Stauts节点设置为相对的值（300：拒保、400：中断流程），展示信息提示（ErrorMessages节点数据）。
+     
+
 ```xml
 <?xml version="1.0" encoding="GBK" standalone="yes"?>
 <PackageList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1212,3 +1227,29 @@ checkUrl:输入项的验证功能，在输入项有复杂的验证时，没有�
   </Package>
 </PackageList>
 ```
+##3.6车型选择接口
+获取表单接口返回数据不是续保报价数据，需要采集车辆、车主信息。品牌型号是通过接口方式和车险接口平台交互获取，以供用户选择车型。
+###3.6.1请求数据
+采用ajax异步方式交互，用jsonp解决ajax跨域请求。
+
+生产地址：http://chexian.sinosig.com/Partner/netVehicleModel.action?page=1&pageSize=6&searchCode=bh7&searchType=0&encoding=GBK&isSeats=1&callback=jsonp1045
+
+测试地址：
+http://1.202.156.227:7002/Partner/netVehicleModel.action?page=1&pageSize=6&searchCode=bh7&searchType=0&encoding=GBK&isSeats=1&callback=jsonp1045
+
+为了避免一次交互，数据量过大，车型选择采用分页方式。
+
+page和pageSize是页面数据和每页显示条数。
+
+searchCode是用户输入的关键字或者vin码。
+
+searchType 标识用户的查询类型。0：关键字查询；1：vin码查询（车架号）。
+
+isSeats 是否查询座位数 1：查询。其他可不传此参数
+###3.6.2返回数据
+例如：
+jsonp1045(
+``` json
+{"rows":[{"key":"XDABBD0017","value":"北京现代 1.4L 北京现代雅绅特 自动档 尊贵型 参考价：98800","seats":5},{"key":"XDAAMD0045","value":"北京现代 1.6L 北京现代伊兰特 自动档 2007款 舒适型 参考价：98800","seats":5},{"key":"XDAAMD0068","value":"北京现代 1.6L 北京现代伊兰特 自动档 2008款 舒适型 参考价：107200","seats":5},{"key":"XDABBD0008","value":"北京现代 1.6L 北京现代雅绅特 自动档 豪华型 参考价：108300","seats":5},{"key":"XDAAMD0017","value":"北京现代 1.6L 北京现代伊兰特 自动档 豪华型 参考价：142000","seats":5},{"key":"XDABFD0011","value":"北京现代 1.4L 北京现代瑞纳 自动档 2011款 豪华型 参考价：108400","seats":5}],"counter":225}
+```
+
