@@ -100,8 +100,8 @@ UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error er
 ##[3.10申请核保接口](https://github.com/360bao/Manual/blob/master/API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/3.10%E7%94%B3%E8%AF%B7%E6%A0%B8%E4%BF%9D%E6%8E%A5%E5%8F%A3.md)
 ##[3.11配送信息修改接口](https://github.com/360bao/Manual/blob/master/API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/3.11%E9%85%8D%E9%80%81%E4%BF%A1%E6%81%AF%E4%BF%AE%E6%94%B9%E6%8E%A5%E5%8F%A3.md)
 ##[3.12支付检查接口](https://github.com/360bao/Manual/blob/master/API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/3.12%E6%94%AF%E4%BB%98%E6%A3%80%E6%9F%A5%E6%8E%A5%E5%8F%A3.md)
-##[3.13获取验证码接口(126)](https://github.com/360bao/Manual/blob/master/API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/3.13%E8%8E%B7%E5%8F%96%E9%AA%8C%E8%AF%81%E7%A0%81%E6%8E%A5%E5%8F%A3(126).md)
-##[3.14保存验证码（127）](https://github.com/360bao/Manual/blob/master/API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/3.14%E4%BF%9D%E5%AD%98%E9%AA%8C%E8%AF%81%E7%A0%81(127).md)
+##[3.13获取验证码接口(126)](https://github.com/360bao/Manual/blob/master/API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/3.13%E8%8E%B7%E5%8F%96%E9%AA%8C%E8%AF%81%E7%A0%81%E6%8E%A5%E5%8F%A3126.md)
+##[3.14保存验证码（127）](https://github.com/360bao/Manual/blob/master/API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/3.14%E4%BF%9D%E5%AD%98%E9%AA%8C%E8%AF%81%E7%A0%81127.md)
 ##[3.15承保接口](https://github.com/360bao/Manual/blob/master/API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/3.15%E6%89%BF%E4%BF%9D%E6%8E%A5%E5%8F%A3.md)
 #4.附录表
 
