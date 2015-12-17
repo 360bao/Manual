@@ -46,7 +46,7 @@
    </tr>
 </table>
 
-#2.	JS SDK
+#2.接口文档
 
 ``` javascript
 {
@@ -64,7 +64,9 @@
 	}]
 }
 ```
-##2.1接入API (CATEGORY: CONNECT)
+##2.1接入接口
+
+(CATEGORY: CONNECT)
 接入API提供合作伙伴接入验证功能，共有三个方法：
 - 注册：提供手机号、密码，注册成为合作伙伴，获取专属URL和Error
 Register(PhoneNum string, Password string) (URL string, Error error)
@@ -73,7 +75,9 @@ Login(PhoneNum string, Password string) (SessionId string, Error error)
 - 修改密码：提供手机号、旧密码和新密码，获得Error
 UpdateLogin(PhoneNum string, OldPassword string,  NewPassword string)  (Error error)
 
-##2.2交易查询API (CATEGORY: QUERY)
+##2.2交易查询
+
+(CATEGORY: QUERY)
 交易查询API提供保单、佣金的信息查询，以及提交保单数据异常的申请。
 - 查询保单：获取部分或全部保单数据
 - 查询佣金：获取佣金明细
