@@ -1,8 +1,13 @@
 ![huayi](http://www.360bao.com/Content/Image/logo.png)
 
+
+##测试服务器地址
+http://service.360bao.com:50022
+
 ##第一步：从服务器请求SessionId
 使用注册得到的partnerId，向服务器请求SessionId
 
+* url:http://service.360bao.com:50022/fast/beigin_session
 * 上行数据：
 ```javascript
 {
@@ -19,6 +24,7 @@
 ##第二步：从服务器获取用户信息
 输入车辆行驶区域，车牌号，手机号获取用户信息，如果用户以前在平台上购买过车险，则返回相关数据。
 
+* url:http://service.360bao.com:50022/fast/get_customer_info
 * 上行数据：
 ```javascript
 {
@@ -46,7 +52,9 @@
 }
 ```
 ##第三步：提交用户信息和车险信息
+提交用户信息和车险信息以获取报价
 
+* url:http://service.360bao.com:50022/fast/get_price
 * 上行数据：
 ```javascript
 {
@@ -208,6 +216,7 @@
 ```
 ##第四步：提交配送信息并获取支付链接
 
+* url:http://service.360bao.com:50022/fast/pre_pay
 * 上行数据：
 ```javascript
 {
