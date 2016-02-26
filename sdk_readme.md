@@ -218,7 +218,7 @@ http://service.360bao.com:50023
 }
 ```
 ##第四步：提交配送信息并获取支付链接
-
+地区码的取得，详见 [附2](#附2)
 * url:http://service.360bao.com:50023/fast/pre_pay
 * 上行数据：
 ```javascript
@@ -233,7 +233,7 @@ http://service.360bao.com:50023
   "insuredPhone": "13271822680",//被保人电话
   "addresseeName": "陈金龙",//收件人姓名
   "addresseePhone": "13271822680",//收件人电话
-  "addresseeCityCode": "110100",//收件人地区码，见 [附2](#附2)
+  "addresseeCityCode": "110100",//收件人地区码
   "addresseeDetails": "南湖公园旁",//收件人地址
   "deliveryDate": "2016-02-27T00:00:00"//配送日期
 }
