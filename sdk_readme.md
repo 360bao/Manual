@@ -233,7 +233,7 @@ http://service.360bao.com:50023
   "insuredPhone": "13271822680",//被保人电话
   "addresseeName": "陈金龙",//收件人姓名
   "addresseePhone": "13271822680",//收件人电话
-  "addresseeCityCode": "110100",//收件人地区码，见[附2](#附2)
+  "addresseeCityCode": "110100",//收件人地区码，见 [附2](#附2)
   "addresseeDetails": "南湖公园旁",//收件人地址
   "deliveryDate": "2016-02-27T00:00:00"//配送日期
 }
