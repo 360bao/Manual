@@ -33,9 +33,9 @@ http://service.360bao.com:50023
 {
   "sessionId": "51ac21fc4efc4f8ca16b7b816fd175f7",
   "cityCode": "510100",
-  "noLicense": false,
-  "licenseNo": "川AP9u81",
-  "ownerMobile": "13271822680"
+  "noLicense": false,//新车还未上牌
+  "licenseNo": "川AP9u81",//车牌号
+  "ownerPhone": "13271822680"//车主电话号码
 }
 ```
 * 下行数据：
