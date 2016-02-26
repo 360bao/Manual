@@ -2,7 +2,7 @@
 
 
 ##正式服务器地址
-http://service.360bao.com:50022
+http://service.360bao.com:50011
 ##测试服务器地址1
 http://service.360bao.com:50023
 测试服务器1返回固定数据，用于测试访问者的解析方法
