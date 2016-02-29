@@ -98,38 +98,38 @@ http://service.360bao.com:50023
   "biz": {
     "bizTotal": {
       "label": "商业总保费",
-      "premium": "371450",
-      "value": ""
+      "premium": 371450,
+      "value": 0
     },
     "damage": {
       "label": "机动车损失保险",
-      "premium": "122574",
-      "value": "52352.00"
+      "premium": 122574,
+      "value": 52352.00
     },
     "damageNoneDeductible": {
       "label": "不计免赔险(机动车损失保险)",
-      "premium": "18386",
-      "value": "1"
+      "premium": 18386,
+      "value": 1
     },
     "driverLiability": {
       "label": "车上人员责任保险(驾驶员)",
-      "premium": "2962",
-      "value": "10000.00"
+      "premium": 2962,
+      "value": 10000.00
     },
     "driverLiabilityNoneDeductible": {
       "label": "不计免赔险(车上人员责任保险(驾驶员))",
-      "premium": "444",
-      "value": "1"
+      "premium": 444,
+      "value": true
     },
     "forceCoverage": {
       "label": "交强险",
-      "premium": "0",
-      "value": "1"
+      "premium": 0,
+      "value": true
     },
     "glassBroken": {
       "label": "玻璃单独破碎险",
-      "premium": "11229",
-      "value": "1"
+      "premium": 11229,
+      "value": 1
     },
     "lastClaimText": {
       "label": "上年出险信息",
@@ -138,53 +138,53 @@ http://service.360bao.com:50023
     },
     "passengerLiability": {
       "label": "车上人员责任保险(乘客)",
-      "premium": "7514",
-      "value": "10000.00"
+      "premium": 7514,
+      "value": 10000.00
     },
     "passengerLiabilityNoneDeductible": {
       "label": "不计免赔险(车上人员责任保险(乘客))",
-      "premium": "1127",
-      "value": "1"
+      "premium": 1127,
+      "value": true
     },
     "robberyTheft": {
       "label": "全车盗抢保险",
-      "premium": "27204",
-      "value": "52352.00"
+      "premium": 27204,
+      "value": 52352.00
     },
     "robberyTheftNoneDeductible": {
       "label": "不计免赔险(全车盗抢保险)",
-      "premium": "5441",
-      "value": "1"
+      "premium": 5441,
+      "value": true
     },
     "scratch": {
       "label": "车身划痕损失险",
-      "premium": "44073",
-      "value": "2000.00"
+      "premium": 44073,
+      "value": 2000.00
     },
     "scratchNoneDeductible": {
       "label": "不计免赔险(车身划痕损失险)",
-      "premium": "0",
-      "value": "0"
+      "premium": 0,
+      "value": false
     },
     "spontaneousCombustion": {
       "label": "自燃损失险",
-      "premium": "11348",
-      "value": "52352.00"
+      "premium": 11348,
+      "value": 52352.00
     },
     "thirdPartyLiability": {
       "label": "商业第三者责任险",
-      "premium": "103607",
-      "value": "300000.00"
+      "premium": 103607,
+      "value": 300000.00
     },
     "thirdPartyLiabilityNoneDeductible": {
       "label": "不计免赔险(商业第三者责任险)",
-      "premium": "15541",
-      "value": "1"
+      "premium": 15541,
+      "value": true
     },
     "withAverage": {
       "label": "发动机涉水损失险",
-      "premium": "0",
-      "value": "0"
+      "premium": 0,
+      "value": true
     }
   },
   "deadline": {
@@ -200,23 +200,22 @@ http://service.360bao.com:50023
   "force": {
     "force": {
       "label": "交强险",
-      "premium": "66500"
+      "premium": 66500
     },
     "forceTotal": {
       "label": "交强险总保费",
-      "premium": "96500"
+      "premium": 96500
     },
     "vehicleTax": {
       "label": "车船税",
-      "premium": "30000"
+      "premium": 30000
     }
   },
   "sessionId": "51ac21fc4efc4f8ca16b7b816fd175f7",
   "success": true,
   "total": {
     "label": "网购价",
-    "premium": "467950",
-    "value": ""
+    "premium": 467950
   }
 }
 ```
@@ -248,16 +247,16 @@ http://service.360bao.com:50023
   "ProposalNo": "T211105092015097566",//保险公司投保单号
   "TBOrderId": "1746b46825e3488085f8c7b9bda54985",//华谊总订单号
   "bizBeginDate": "2016-03-17",//商业险起保日期
-  "bizTotalPremium": "439880",//商业总保费
+  "bizTotalPremium": 439880,//商业总保费
   "forceBeginDate": "2016-03-17",//交强险起保日期
-  "forcePremium": "95000",//交强险保费
-  "forceTotalPremium": "96500",//交强险保费（交强险+车船税）
+  "forcePremium": 95000,//交强险保费
+  "forceTotalPremium": 96500,//交强险保费（交强险+车船税）
   "payUrl": "http://chexian.sinosig.com/netCarPcPayVerifyAction.action?proposalno=556be090ddc65d0f6714ca28033cc5696ae99318245422ac\u0026insrancename=8a74f2394ce3c9ba",//支付链接
   "sessionId": "51ac21fc4efc4f8ca16b7b816fd175f7",
-  "standardPremium": "701341",//市场价
+  "standardPremium": 701341,//市场价
   "success": true,
-  "totalPremium": "540880",//网购价
-  "vehicleTaxPremium": "6000"//车船税
+  "totalPremium": 540880,//网购价
+  "vehicleTaxPremium": 6000//车船税
 }
 ```
 
