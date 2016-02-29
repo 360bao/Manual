@@ -73,21 +73,21 @@ http://service.360bao.com:50023
   "transferedDate": "",//过户日期
   "ownerName": "陈金龙",//车主姓名
   "ownerIdNo": "510101198312185685",//车主身份证号
-  "damageCoverage": true,//车辆损失险
-  "thirdPartyLiabilityCoverage": 300000.0,//三责险
-  "robberyTheftCoverage": true,//全车盗抢险
-  "driverLiabilityCoverage": 10000.0,//司机座位责任险
-  "passengerLiabilityCoverage": 10000.0,//乘客座位责任险
-  "damageNoneDeductible": true,//不计免赔险(车损险)
-  "thirdPartyLiabilityNoneDeductible": true,//不计免赔险(三者险)
-  "robberyTheftNoneDeductible": true,//不计免赔险(机动车盗抢险)
-  "driverLiabilityNoneDeductible": true,//不计免赔险(司机险)
-  "passengerLiabilityNoneDeductible": true,//不计免赔险(乘客险)
-  "glassBrokenCoverage": 0,//玻璃单独破碎险
-  "spontaneousCombustionCoverage": 0.0,//自燃损失险
-  "scratchCoverage": 0.0,//车身划痕损险
-  "withAverageCoverage": 0,//发动机涉水损失险
-  "forceCoverage": true,//交强险
+  "damageCoverage": true,//车辆损失险 [投保:true,不投保:false]
+  "thirdPartyLiabilityCoverage": 300000.0,//三责险 见 [附3]
+  "robberyTheftCoverage": true,//全车盗抢险 [投保:true,不投保:false]
+  "driverLiabilityCoverage": 10000.0,//司机座位责任险 见 [附4]
+  "passengerLiabilityCoverage": 10000.0,//乘客座位责任险 见 [附5]
+  "damageNoneDeductible": true,//不计免赔险(车损险) [投保:true,不投保:false]
+  "thirdPartyLiabilityNoneDeductible": true,//不计免赔险(三者险) [投保:true,不投保:false]
+  "robberyTheftNoneDeductible": true,//不计免赔险(机动车盗抢险) [投保:true,不投保:false]
+  "driverLiabilityNoneDeductible": true,//不计免赔险(司机险) [投保:true,不投保:false]
+  "passengerLiabilityNoneDeductible": true,//不计免赔险(乘客险) [投保:true,不投保:false]
+  "glassBrokenCoverage": 0,//玻璃单独破碎险 见 [附6]
+  "spontaneousCombustionCoverage": false,//自燃损失险 [投保:true,不投保:false]
+  "scratchCoverage": 0,//车身划痕损险  见 [附7]
+  "withAverageCoverage": false,//发动机涉水损失险 [投保:true,不投保:false]
+  "forceCoverage": true,//交强险 [投保:true,不投保:false]
   "bizBeginDate": "2016-02-26",//商业险生效日期
   "forceBeginDate": "2016-02-26"//交强险生效日期
 }
@@ -277,4 +277,46 @@ http://services.360bao.com:50011/region?parent=0，取得的数据如下：
 [{"TITLE":"北京","CODE":"11"},{"TITLE":"天津","CODE":"12"},{"TITLE":"河北省","CODE":"13"},{"TITLE":"山西省","CODE":"14"},{"TITLE":"内蒙古自治区","CODE":"15"},{"TITLE":"辽宁省","CODE":"21"},{"TITLE":"吉林省","CODE":"22"},{"TITLE":"黑龙江省","CODE":"23"},{"TITLE":"上海市","CODE":"31"},{"TITLE":"江苏省","CODE":"32"},{"TITLE":"浙江省","CODE":"33"},{"TITLE":"安徽省","CODE":"34"},{"TITLE":"福建省","CODE":"35"},{"TITLE":"江西省","CODE":"36"},{"TITLE":"山东省","CODE":"37"},{"TITLE":"河南省","CODE":"41"},{"TITLE":"湖北省","CODE":"42"},{"TITLE":"湖南省","CODE":"43"},{"TITLE":"广东省","CODE":"44"},{"TITLE":"广西壮族自治区","CODE":"45"},{"TITLE":"海南省","CODE":"46"},{"TITLE":"重庆市","CODE":"50"},{"TITLE":"四川省","CODE":"51"},{"TITLE":"贵州省","CODE":"52"},{"TITLE":"云南省","CODE":"53"},{"TITLE":"西藏自治区","CODE":"54"},{"TITLE":"陕西省","CODE":"61"},{"TITLE":"甘肃省","CODE":"62"},{"TITLE":"青海省","CODE":"63"},{"TITLE":"宁夏回族自治区","CODE":"64"},{"TITLE":"新疆维吾尔自治区","CODE":"65"}]
 ```
 
+# 附3
+三责险待选项：
+- 0:不投保
+- 50000 :5万
+- 100000:10万
+- 200000:20万
+- 300000:30万
+- 500000:50万
+- 1000000:100万
 
+# 附4
+司机座位责任险待选项
+- 0:不投保
+- 10000:1万
+- 20000:2万
+- 30000:3万
+- 40000:4万
+- 50000:5万
+- 100000:10万
+- 200000:20万
+
+# 附5
+乘客座位责任险待选项
+- 0:不投保
+- 10000:1万
+- 20000:2万
+- 30000:3万
+- 40000:4万
+- 50000:5万
+- 100000:10万
+- 200000:20万
+
+# 附6
+玻璃单独破碎险待选项
+- 0:不投保
+- 1:国产
+- 2:进口
+
+# 附7
+车身划痕损险待选项
+- 0:不投保
+- 2000:2000元
+- 5000:5000元
