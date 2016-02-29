@@ -60,6 +60,8 @@ http://service.360bao.com:50023
 ##第三步：提交用户信息和车险信息
 提交用户信息和车险信息以获取报价
 
+注：premium都以分为单位。
+
 * url:http://service.360bao.com/fast/get_price
 * 上行数据：
 ```javascript
