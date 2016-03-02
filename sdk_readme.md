@@ -70,7 +70,7 @@ http://service.360bao.com:50023
   "engineNo": "8514691",//发动机号
   "registerDate": "2011-03-17",//车辆注册日期
   "vehicleFrameNo": "ldc933l27a51489181",//车架号
-  "vehicleId": "BZAAED0108",//车辆配置型号ID
+  "vehicleId": "BZAAED0108",//车辆配置型号ID，见 附8
   "isTransfered": false,//是否过户车
   "transferedDate": "",//过户日期
   "ownerName": "陈金龙",//车主姓名
