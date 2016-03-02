@@ -324,7 +324,7 @@ http://service.360bao.com/product/utility/region?parent=0，取得的数据如�
 
 # 附8
 
-使用jsonp调用：http://service.360bao.com/product/utility/query_auto_model?model={model}来获取车型ID：
+使用jsonp调用：http://service.360bao.com/product/utility/query_auto_model?model={model}来获取车型ID，其中model是用户行驶证的车型信息
 http://service.360bao.com/product/utility/query_auto_model?model=DC7164DTAM，取得的数据如下：
 
 ```javascript
