@@ -2,15 +2,15 @@
 
 
 ##正式服务器地址
-http://service.360bao.com
+http://api.360bao.com
 ##测试服务器地址1
-http://service.360bao.com:50023
+http://api.360bao.com:50023
 测试服务器1返回固定数据，用于测试访问者的解析方法
 
 ##第一步：从服务器请求SessionId
 使用注册得到的partnerId，向服务器请求SessionId
 
-* url:http://service.360bao.com/fast/beigin_session
+* url:http://api.360bao.com/fast/beigin_session
 * 上行数据：
 ```javascript
 {
@@ -30,7 +30,7 @@ http://service.360bao.com:50023
 该步骤也可以不调用，不影响整体报价和购买流程，第三方如果有自己的用户数据库，则可以使用自己的数据。
 行驶区域码见 [附1](#附1)
 
-* url:http://service.360bao.com/fast/get_customer_info
+* url:http://api.360bao.com/fast/get_customer_info
 * 上行数据：
 ```javascript
 {
@@ -62,7 +62,7 @@ http://service.360bao.com:50023
 
 注：premium都以分为单位。
 
-* url:http://service.360bao.com/fast/get_price
+* url:http://api.360bao.com/fast/get_price
 * 上行数据：
 ```javascript
 {
@@ -223,7 +223,7 @@ http://service.360bao.com:50023
 ```
 ##第四步：提交配送信息并获取支付链接
 地区码的取得，详见 [附2](#附2)
-* url:http://service.360bao.com/fast/pre_pay
+* url:http://api.360bao.com/fast/pre_pay
 * 上行数据：
 ```javascript
 {
@@ -271,8 +271,8 @@ Simple是简称
 
 # 附2
 
-使用jsonp调用：http://service.360bao.com/product/utility/region?parent={parent}来获取地理位置：
-http://service.360bao.com/product/utility/region?parent=0，取得的数据如下：
+使用jsonp调用：http://api.360bao.com/product/utility/region?parent={parent}来获取地理位置：
+http://api.360bao.com/product/utility/region?parent=0，取得的数据如下：
 
 ```javascript
 [{"TITLE":"北京","CODE":"11"},{"TITLE":"天津","CODE":"12"},{"TITLE":"河北省","CODE":"13"},{"TITLE":"山西省","CODE":"14"},{"TITLE":"内蒙古自治区","CODE":"15"},{"TITLE":"辽宁省","CODE":"21"},{"TITLE":"吉林省","CODE":"22"},{"TITLE":"黑龙江省","CODE":"23"},{"TITLE":"上海市","CODE":"31"},{"TITLE":"江苏省","CODE":"32"},{"TITLE":"浙江省","CODE":"33"},{"TITLE":"安徽省","CODE":"34"},{"TITLE":"福建省","CODE":"35"},{"TITLE":"江西省","CODE":"36"},{"TITLE":"山东省","CODE":"37"},{"TITLE":"河南省","CODE":"41"},{"TITLE":"湖北省","CODE":"42"},{"TITLE":"湖南省","CODE":"43"},{"TITLE":"广东省","CODE":"44"},{"TITLE":"广西壮族自治区","CODE":"45"},{"TITLE":"海南省","CODE":"46"},{"TITLE":"重庆市","CODE":"50"},{"TITLE":"四川省","CODE":"51"},{"TITLE":"贵州省","CODE":"52"},{"TITLE":"云南省","CODE":"53"},{"TITLE":"西藏自治区","CODE":"54"},{"TITLE":"陕西省","CODE":"61"},{"TITLE":"甘肃省","CODE":"62"},{"TITLE":"青海省","CODE":"63"},{"TITLE":"宁夏回族自治区","CODE":"64"},{"TITLE":"新疆维吾尔自治区","CODE":"65"}]
@@ -324,8 +324,8 @@ http://service.360bao.com/product/utility/region?parent=0，取得的数据如�
 
 # 附8
 
-使用jsonp调用：http://service.360bao.com/product/utility/query_auto_model?model={model}来获取车型ID，其中model是用户行驶证的车型信息
-http://service.360bao.com/product/utility/query_auto_model?model=DC7164DTAM，取得的数据如下：
+使用jsonp调用：http://api.360bao.com/product/utility/query_auto_model?model={model}来获取车型ID，其中model是用户行驶证的车型信息
+http://api.360bao.com/product/utility/query_auto_model?model=DC7164DTAM，取得的数据如下：
 
 ```javascript
 //请稍候，正在更新中
