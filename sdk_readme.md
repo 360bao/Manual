@@ -10,7 +10,7 @@ http://api.360bao.com:50023
 ##第一步：从服务器请求SessionId
 使用注册得到的partnerId，向服务器请求SessionId
 
-* url:http://api.360bao.com/fast/beigin_session
+* url:http://api.360bao.com/product/auto_insurance/begin_session
 * 上行数据：
 ```javascript
 {
@@ -30,7 +30,7 @@ http://api.360bao.com:50023
 该步骤也可以不调用，不影响整体报价和购买流程，第三方如果有自己的用户数据库，则可以使用自己的数据。
 行驶区域码见 [附1](#附1)
 
-* url:http://api.360bao.com/fast/get_customer_info
+* url:http://api.360bao.com/product/auto_insurance/get_customer_info
 * 上行数据：
 ```javascript
 {
@@ -62,7 +62,7 @@ http://api.360bao.com:50023
 
 注：premium都以分为单位。
 
-* url:http://api.360bao.com/fast/get_price
+* url:http://api.360bao.com/product/auto_insurance/get_price
 * 上行数据：
 ```javascript
 {
@@ -223,7 +223,7 @@ http://api.360bao.com:50023
 ```
 ##第四步：提交配送信息并获取支付链接
 地区码的取得，详见 [附2](#附2)
-* url:http://api.360bao.com/fast/pre_pay
+* url:http://api.360bao.com/product/auto_insurance/pre_pay
 * 上行数据：
 ```javascript
 {
