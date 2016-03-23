@@ -1,9 +1,5 @@
 ##获取 access token
 
-
-![huayi](http://www.360bao.com/Content/Image/logo.png)
-
-
 测试服地址：http://sso.360bao.com/api/token?grant_type=client_credential&appid=APPID&secret=SECRET
 
 grant_type	必须	获取access_token填写client_credential
