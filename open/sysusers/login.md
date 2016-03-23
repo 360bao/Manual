@@ -4,6 +4,7 @@
 * POST 测试服地址：http://sso.360bao.com/api/sysusers/login
 - phone	必须	手机号
 - password	必须	密码（需要md5加密）
+- access_token 必须
 
 ### 返回：
 
