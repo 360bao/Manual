@@ -70,6 +70,8 @@ http://api.360bao.com:50023
   "engineNo": "8514691",//发动机号
   "registerDate": "2011-03-17",//车辆注册日期
   "vehicleFrameNo": "ldc933l27a51489181",//车架号
+  "modelName":"DC7148",//不一定完整的车型信息
+  "vehicleName":"雪佛莱手动挡1.6",//车辆配置型号
   "vehicleId": "BZAAED0108",//车辆配置型号ID，见 附8
   "isTransfered": false,//是否过户车
   "transferedDate": "",//过户日期
