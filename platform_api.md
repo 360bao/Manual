@@ -1,17 +1,18 @@
 # 计算保费:
 ```javascript
+// 上行
 {
     "insurance": {
         "pid": "xxtx",
         "name": "孝行天下",
         "insurancePeriod": "10年",
         "paymentPeriod": "10年",
-        "premium": 5000000,
+        "coverage": 5000000, //保额
         "copies": 1,
         "subInsurances": [
             {
                 "name": "孝行天下子保险1",
-                "premium": 2000000,
+                "coverage": 2000000,//保额
                 "copies": 1
             },
             {
@@ -82,9 +83,16 @@
         "附加信息1": "hahah"
     }
 }
+//下行
+{
+    "result":true,
+    "message":"",
+    "premium":1234500,
+}
 ```
 
 # 创建订单:
+//上行
 ```javascript
 {
     "insurance": {
@@ -167,6 +175,12 @@
     "extraData": {
         "附加信息1": "hahah"
     }
+}
+//下行
+{
+    "result":true,
+    "message":"",
+    "payUrl":"http://wx.360bao.com/pay/11122",
 }
 ```
 
