@@ -17,7 +17,7 @@
             },
             {
                 "name": "孝行天下子保险2",
-                "premium": 1,
+                "coverage": 1,//保额
                 "copies": 1
             }
         ]
