@@ -1,4 +1,90 @@
-# create order:
+# 计算保费:
+```javascript
+{
+    "insurance": {
+        "pid": "xxtx",
+        "name": "孝行天下",
+        "insurancePeriod": "10年",
+        "paymentPeriod": "10年",
+        "premium": 5000000,
+        "copies": 1,
+        "subInsurances": [
+            {
+                "name": "孝行天下子保险1",
+                "premium": 2000000,
+                "copies": 1
+            },
+            {
+                "name": "孝行天下子保险2",
+                "premium": 1,
+                "copies": 1
+            }
+        ]
+    },
+    "applicant": {
+        "fullName": "投保人",
+        "idType": "身份证",
+        "idNo": "37172219841024847X",
+        "relationship2Insured": "父母",
+        "address": "云南省 大理白族自治州 云龙县",
+        "zipCode": "100223",
+        "phone": "13588888888",
+        "email": "test@360bao.com"
+    },
+    "insured": {
+        "fullName": "被保人",
+        "idType": "身份证",
+        "idNo": "532929200305074400",
+        "address": "云南省 大理白族自治州 云龙县",
+        "zipCode": "100223",
+        "phone": "13588888888",
+        "email": "test@360bao.com"
+    },
+    "beneficiaries": [
+        {
+            "fullName": "受益人1",
+            "idType": "身份证",
+            "idNo": "37172219841024847X",
+            "relationship2Insured": "父母",
+            "allocatedShare": 36,
+            "phone": "13588888888",
+            "email": "test@360bao.com"
+        },
+        {
+            "fullName": "受益人2",
+            "idType": "身份证",
+            "idNo": "511028198604304384",
+            "relationship2Insured": "父母",
+            "allocatedShare": 64,
+            "phone": "13588888888",
+            "email": "test@360bao.com"
+        }
+    ],
+    "addressee": {
+        "fullName": "联系人",
+        "phone": "13588888888",
+        "zipCode": "123456",
+        "detail": "四川省 内江市 隆昌县",
+        "email": "test@360bao.com"
+    },
+    "cardHolder": {
+        "fullName": "持卡人",
+        "idType": "身份证",
+        "idNo": "511028198604304384",
+        "phone": "13588888888",
+        "bankName": "招商银行",
+        "account": "62226287654488"
+    },
+    "payment": {
+        "paymentType": "alipay"
+    },
+    "extraData": {
+        "附加信息1": "hahah"
+    }
+}
+```
+
+# 创建订单:
 ```javascript
 {
     "insurance": {
