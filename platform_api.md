@@ -170,7 +170,7 @@
         "account": "62226287654488"
     },
     "payment": {
-        "paymentType": "alipay"
+        "paymentMethod": "alipay"
     },
     "extraData": {
         "附加信息1": "hahah"
