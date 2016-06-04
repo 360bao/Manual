@@ -180,7 +180,16 @@
 {
     "result":true,
     "message":"",
-    "payUrl":"http://wx.360bao.com/pay/11122",
+    "paymentMethods":[
+        {
+            "name":"微信支付",
+            "url":"http://wx.360bao.com/pay/11122"
+        },
+        {
+            "name":"支付宝支付",
+            "url":"http://alipay.360bao.com/pay/11122"
+        }
+    ]
 }
 ```
 
