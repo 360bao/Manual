@@ -1,0 +1,18 @@
+# 获取针对所有下级,所有产品的佣金率
+
+// http://platform.360bao.com/api/commission_rate/get/1
+
+方法：GET
+
+权限：需要授权
+
+地址参数说明：
+
+page_size:申请时间在此时间后的
+
+page_index:申请时间在此时间前的
+
+```javascript
+//下行数据
+```
+

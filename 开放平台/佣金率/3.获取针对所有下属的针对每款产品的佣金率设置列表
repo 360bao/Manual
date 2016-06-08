@@ -1,0 +1,16 @@
+# 获取针对所有下属的针对每款产品的佣金率设置列表
+
+// http://platform.360bao.com/api/commission_rate/get/3
+
+方法：GET
+
+权限：需要授权
+
+地址参数说明：
+
+无
+
+```javascript
+//下行数据
+```
+
