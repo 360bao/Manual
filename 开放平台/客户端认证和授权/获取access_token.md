@@ -1,11 +1,38 @@
 ##获取 access token
 
-###请求：
-* 测试服地址：http://platform.360bao.com/auth/token?grant_type=client_credentials&client_id=CLIENT_ID&client_secret=CLIENT_SECRET
-- grant_type	必须	获取access_token填写client_credentials
-- client_id	必须	第三方用户唯一凭证
-- client_secret	必须	第三方用户唯一凭证密钥
+------------
 
-###返回：
-- access_token	获取到的凭证
-- expires_in	凭证有效时间，单位：秒
+###说明：
+   > access token访问令牌包含此次访问api会话的安全信息。该令牌是代理人授权的安全标识，并控制代理人相关操作的能力。
+
+
+###请求方式：
+> GET
+
+###请求地址：
+> http://platform.360bao.com/auth/token
+
+###请求参数：
+> 
+  * grant_type：必须，获取access_token填写client_credentials
+  * client_id：必须，第三方用户唯一凭证
+  * client_secret：必须，第三方用户唯一凭证密钥
+ 
+###请求示例：
+> http://platform.360bao.com/auth/token?client_id=huayi&client_secret=107f8e74dcf&grant_type=client_credentials
+
+###下行数据：
+```
+{
+    "access_token": "W8B0p5sAQeKFcUwf_BVdQQ",
+    "expires_in": 7200,
+    "token_type": "Bearer"
+}
+    access_token,获取到的凭证
+    expires_in,凭证有效时间，单位：秒
+    token_type,令牌类型
+```
+
+
+
+
