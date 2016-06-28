@@ -1,23 +1,25 @@
-# 修改个人信息
+##绑定微信
 
-// http://platform.360bao.com/api/account/bind/wx
+------------
 
-方法：POST
+###请求方式：
+> POST
 
-权限：需要授权
+###请求地址：
+> http://platform.360bao.com/api/account/bind/wx
 
-地址参数说明：
+###授权：
+> 需要授权,在request 的Header中加入
+"Authorization":"Bearer "+jwt
 
+###上行数据：
+```
 无
-
-//上行数据
-```javascript
+```
+###下行数据：
+```
 {
-    "openId": "xxxxxx"
+    "message":"",
+    "result":true
 }
 ```
-
-//下行数据
-```javascript
-```
-
