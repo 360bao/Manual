@@ -3,13 +3,13 @@
 ------------
 
 ###说明：
-   > access token访问令牌包含此次访问api会话的安全信息。该令牌是代理人授权的安全标识，并控制代理人相关操作的能力。
+> access token访问令牌包含此次访问api会话的安全信息。该令牌是代理人授权的安全标识，并控制代理人相关操作的能力。
 
 ###请求方式：
 > GET
 
 ###请求地址：
-> http://platform.360bao.com/auth/token
+    > http://platform.360bao.com/auth/token
 
 ###请求参数：
 > 
@@ -23,13 +23,10 @@
 ###下行数据：
 ```
 {
-    "access_token": "W8B0p5sAQeKFcUwf_BVdQQ",
-    "expires_in": 7200,
-    "token_type": "Bearer"
+    "access_token": "W8B0p5sAQeKFcUwf_BVdQQ",//获取到的凭证
+    "expires_in": 7200,//获取到的凭证
+    "token_type": "Bearer"//令牌类型
 }
-    access_token,获取到的凭证
-    expires_in,凭证有效时间，单位：秒
-    token_type,令牌类型
 ```
 
 
