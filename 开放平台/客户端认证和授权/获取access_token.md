@@ -18,7 +18,7 @@
   * client_secret：必须，第三方用户唯一凭证密钥
  
 ###请求示例：
-> http://platform.360bao.com/auth/token?client_id=test&client_secret=10840c62591&grant_type=client_credentials
+> http://platform.360bao.com/auth/token?client_id=test&client_secret=为您分配的secret&grant_type=client_credentials
 
 ###下行数据：
 ```
