@@ -3,61 +3,62 @@
 ```javascript
 {
   "vehicle": {
-    "ownerPhone": "13921822880", 
-    "ownerName": "陈龙", 
-    "ownerIdNo": "510101198312185685", 
-    "cityCode": "510100",
-    "noLicense": false, 
-    "licenseNo": "京AP92U8", 
-    "engineNo": "8514691", 
-    "registerDate": "2011-03-17", 
-    "vehicleFrameNo": "ldc943l4745148981", 
-    "vehicleId": "BZAAED0108", 
-    "isTransferred": false, 
-    "transferredDate": "" 
+    "ownerPhone": "13271822680", //车主电话号码
+    "ownerName": "陈金龙", //车主姓名
+    "ownerIdNo": "510101198312185685", //车主身份证号
+    "cityCode": "510100", //车辆运行城市 见 [附1]
+    "noLicense": false, //无牌（新车）
+    "licenseNo": "京AP92U8", //车牌号(如果无牌则空白)
+    "seats":5, //座位数
+    "engineNo": "8514691", //发动机号
+    "registerDate": "2011-03-17", //车辆注册日期
+    "vehicleFrameNo": "ldc933l27a51489181", //车架号
+    "vehicleId": "BZAAED0108", //车辆配置型号ID，[jsonp调用：http://api.360bao.com/product/utility/query_auto_model?model={model}，其中model是用户行驶证的车型信息]
+    "isTransferred": false, //是否过户车
+    "transferredDate": "" //过户日期
   },
   "insurance": {
     "biz": {
       "damage": {
-        "coverage": true, 
-        "notDeductible": true 
+        "coverage": true, //车辆损失险 [true:投保 false:不投保]
+        "notDeductible": true //不计免赔 [true:投保 false:不投保]
       },
       "thirdPartyLiability": {
-        "coverage": 300000.0, 
-        "notDeductible": true 
+        "coverage": 300000.0, //三责险 [0:不投保 50000 :5万 100000:10万 200000:20万 300000:30万 500000:50万 1000000:100万]
+        "notDeductible": true //不计免赔 [true:投保 false:不投保]
       },
       "robberyTheft": {
-        "coverage": true, 
-        "notDeductible": true 
+        "coverage": true, //全车盗抢险 [true:投保 false:不投保]
+        "notDeductible": true //不计免赔 [true:投保 false:不投保]
       },
       "driverLiability": {
-        "coverage": 10000.0, 
-        "notDeductible": true 
+        "coverage": 10000.0, //司机座位责任险 [0:不投保 10000:1万 20000:2万 30000:3万 40000:4万 50000:5万 100000:10万 200000:20万]
+        "notDeductible": true //不计免赔 [true:投保 false:不投保]
       },
       "passengerLiability": {
-        "coverage": 10000.0, 
-        "notDeductible": true 
+        "coverage": 10000.0, //乘客座位责任险 [0:不投保 10000:1万 20000:2万 30000:3万 40000:4万 50000:5万 100000:10万 200000:20万]
+        "notDeductible": true //不计免赔 [true:投保 false:不投保]
       },
       "glassBroken": {
-        "coverage": 0 
+        "coverage": 0 //玻璃单独破碎险 [0:不投保 1:国产 2:进口]
       },
       "spontaneousCombustion": {
-        "coverage": false 
+        "coverage": false //自燃损失险 [true:投保 false:不投保]
       },
       "scratch": {
-        "coverage": 0 
+        "coverage": 0 //车身划痕损险  [0:不投保 2000:2000元 5000:5000元]
       },
       "withAverage": {
-        "coverage": false 
+        "coverage": false //发动机涉水损失险 [true:投保 false:不投保]
       },
       "unknownThirdParty":{
-        "coverage": true 
+        "coverage": true //机动车损失保险无法找到第三方特约险 [true:投保 false:不投保]
       },
-      "beginDate": "2016-02-26" 
+      "beginDate": "2016-02-26" //商业险生效日期
     },
     "force": {
-      "coverage": true, 
-      "beginDate": "2016-02-26" 
+      "coverage": true, //交强险 [true:投保 false:不投保]
+      "beginDate": "2016-02-26" //交强险生效日期
     }
   }
 }
