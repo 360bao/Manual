@@ -13,7 +13,7 @@
     "engineNo": "8514691", //发动机号
     "registerDate": "2011-03-17", //车辆注册日期
     "vehicleFrameNo": "ldc933l27a51489181", //车架号
-    "vehicleId": "BZAAED0108", //车辆配置型号ID，[jsonp调用：http://api.360bao.com/product/utility/query_auto_model?model={model}，其中model是用户行驶证的车型信息]
+    "vehicleId": "BZAAED0108", //车辆配置型号ID，[jsonp调用：http://api.360bao.com/product/utility/query_auto_model?model={model}，其中model是用户行驶证的“品牌型号”信息]
     "isTransferred": false, //是否过户车
     "transferredDate": "" //过户日期
   },
