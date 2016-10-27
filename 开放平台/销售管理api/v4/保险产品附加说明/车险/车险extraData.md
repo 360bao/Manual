@@ -73,8 +73,8 @@ Simple是简称
 
 # 附2
 
-使用jsonp调用：http://api.360bao.com/product/utility/region?parent={parent}来获取地理位置：
-http://api.360bao.com/product/utility/region?parent=0，取得的数据如下：
+使用jsonp调用：http://platform.360bao.com/foundation/region/query?parent={parent}来获取地理位置：
+http://platform.360bao.com/foundation/region/query?parent=0，取得的数据如下：
 
 ```javascript
 [{"TITLE":"北京","CODE":"11"},{"TITLE":"天津","CODE":"12"},{"TITLE":"河北省","CODE":"13"},{"TITLE":"山西省","CODE":"14"},{"TITLE":"内蒙古自治区","CODE":"15"},{"TITLE":"辽宁省","CODE":"21"},{"TITLE":"吉林省","CODE":"22"},{"TITLE":"黑龙江省","CODE":"23"},{"TITLE":"上海市","CODE":"31"},{"TITLE":"江苏省","CODE":"32"},{"TITLE":"浙江省","CODE":"33"},{"TITLE":"安徽省","CODE":"34"},{"TITLE":"福建省","CODE":"35"},{"TITLE":"江西省","CODE":"36"},{"TITLE":"山东省","CODE":"37"},{"TITLE":"河南省","CODE":"41"},{"TITLE":"湖北省","CODE":"42"},{"TITLE":"湖南省","CODE":"43"},{"TITLE":"广东省","CODE":"44"},{"TITLE":"广西壮族自治区","CODE":"45"},{"TITLE":"海南省","CODE":"46"},{"TITLE":"重庆市","CODE":"50"},{"TITLE":"四川省","CODE":"51"},{"TITLE":"贵州省","CODE":"52"},{"TITLE":"云南省","CODE":"53"},{"TITLE":"西藏自治区","CODE":"54"},{"TITLE":"陕西省","CODE":"61"},{"TITLE":"甘肃省","CODE":"62"},{"TITLE":"青海省","CODE":"63"},{"TITLE":"宁夏回族自治区","CODE":"64"},{"TITLE":"新疆维吾尔自治区","CODE":"65"}]
@@ -126,5 +126,5 @@ http://api.360bao.com/product/utility/region?parent=0，取得的数据如下：
 
 # 附8
 
-使用jsonp调用：http://api.360bao.com/product/utility/query_auto_model?model={model}来获取车型ID，其中model是用户行驶证的车型信息
+使用jsonp调用：http://platform.360bao.com/foundation/auto/query_model?model={model}来获取车型ID，其中model是用户行驶证的车型信息
 
