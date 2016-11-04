@@ -51,7 +51,7 @@
       "withAverage": {
         "coverage": false //发动机涉水损失险 [true:投保 false:不投保]
       },
-      "unknownThirdParty":{
+      "cantFindThirdParty":{
         "coverage": true //机动车损失保险无法找到第三方特约险 [true:投保 false:不投保]
       },
       "beginDate": "2016-02-26" //商业险生效日期
