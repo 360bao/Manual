@@ -9,8 +9,9 @@
 > POST
 
 ###请求地址：
-    > 正式环境：http://platform.360bao.com/auth/token
-    > 测试环境：http://pform-test.360bao.com/auth/token
+> 
+   * 正式环境：http://platform.360bao.com/auth/token
+   * 测试环境：http://pform-test.360bao.com/auth/token
 
 ###请求参数：
 > 
@@ -19,8 +20,9 @@
   * client_secret：必须，第三方用户唯一凭证密钥
  
 ###请求示例：
-> http://platform.360bao.com/auth/token
-> application/x-www-form-urlencoded：client_id=test&client_secret=为您分配的secret&grant_type=client_credentials
+> 
+   * http://platform.360bao.com/auth/token
+   * application/x-www-form-urlencoded：client_id=test&client_secret=为您分配的secret&grant_type=client_credentials
 
 ###下行数据：
 ```
