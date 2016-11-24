@@ -6,10 +6,11 @@
 > access token访问令牌包含此次访问api会话的安全信息。该令牌是代理人授权的安全标识，并控制代理人相关操作的能力。
 
 ###请求方式：
-> GET
+> POST
 
 ###请求地址：
-    > http://platform.360bao.com/auth/token
+    > 正式环境：http://platform.360bao.com/auth/token
+    > 测试环境：http://pform-test.360bao.com/auth/token
 
 ###请求参数：
 > 
@@ -18,7 +19,8 @@
   * client_secret：必须，第三方用户唯一凭证密钥
  
 ###请求示例：
-> http://platform.360bao.com/auth/token?client_id=test&client_secret=为您分配的secret&grant_type=client_credentials
+> http://platform.360bao.com/auth/token
+> application/x-www-form-urlencoded：client_id=test&client_secret=为您分配的secret&grant_type=client_credentials
 
 ###下行数据：
 ```
