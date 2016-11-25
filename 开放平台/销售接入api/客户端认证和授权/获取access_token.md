@@ -11,7 +11,7 @@
 ###请求地址：
 > 
    * 正式环境：http://platform.360bao.com/auth/token
-   * 测试环境：http://pform-test.360bao.com/auth/token
+   * 测试环境：https://bit-s.cc/platform/auth/token
 
 ###请求参数：
 > 
