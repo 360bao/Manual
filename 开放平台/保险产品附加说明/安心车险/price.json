@@ -1,0 +1,96 @@
+{
+  "vehicle": {
+    "cityCode": "440100",
+    "plateNo": "粤A33381",
+    "vehicleCode": "BZAAED0110",
+    "vehicleModel": "东风标致307 2010款 豪华版 手动档 1.6L 参考价：95800",
+    "vin": "LDC933L24A5148401",
+    "engineNo": "8544401",
+    "registrationDate": "20140301",
+    "seats": 5,
+    "isTransferred": true,
+    "transferredDate": "20170301",
+    "owner": {
+      "fullName": "陈多大",
+      "phone": "13271822680",
+      "idType": "身份证",
+      "idNo": "37172219841024847X",
+      "email": "chenjinlong@360bao.com",
+      "address": "南湖水乡"
+    }
+  },
+  "insurances": {
+    "compulsory": {
+      "startDate": "20170320",
+      "coverage": true
+    },
+    "commerce": {
+      "startDate": "20170320",
+      "insurances": {
+        "damage": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": true
+        },
+        "thirdPartyLiability": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": 50000
+        },
+        "robberyTheft": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": true
+        },
+        "driverLiability": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": 10000
+        },
+        "passengerLiability": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": 10000
+        },
+        "glassBreakage": {
+          "coverage": "domestic"
+        },
+        "scratch": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": 2000
+        },
+        "spontaneousCombustion": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": true
+        },
+        "withAverage": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": true
+        },
+        "unknown3rdParty": {
+          "coverage": true
+        },
+        "moralDamageLiability": {
+          "noDeductible": {
+            "coverage": true
+          },
+          "coverage": 10000
+        },
+        "anyGarage": {
+          "coverage": true
+        }
+      }
+    }
+  }
+}
