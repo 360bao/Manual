@@ -94,7 +94,7 @@
         }
       }
     }
-  }
+  },
   "policy": {
     "format": "electronic" //[paper:纸质保单 electronic:电子保单] 
   },

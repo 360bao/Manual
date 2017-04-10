@@ -1,166 +1,105 @@
 {
-  "extraData": {
-    "vehicle": {
-      "cityCode": "110101",
-      "plateNo": "",
-      "vehicleCode": "BZAAED0110",
-      "vehicleModel": "东风标致307 2010款 豪华版 手动档 1.6L 参考价：95800",
-      "vin": "LDC933L47A5148401",
-      "engineNo": "4514401",
-      "registrationDate": "20170319",
-      "invoiceDate": "20170319",
-      "invoiceNo": "1234567890",
-      "seats": 5,
-      "isTransferred": true,
-      "transferredDate": "20170319",
-      "owner": {
-        "fullName": "陈多大",
-        "phone": "13271822680",
-        "idType": "身份证",
-        "idNo": "37172219841024847X",
-        "email": "chenjinlong@360bao.com",
-        "address": "南湖水乡"
-      }
+  "vehicle": {
+    "owner": {
+      "phone": "13271822680",
+      "fullName": "陈龙",
+      "idNo": "37172219841024847X"
     },
-    "insurances": {
-      "compulsory": {
-        "startDate": "20170320",
-        "coverage": true
-      },
-      "commerce": {
-        "startDate": "20170320",
-        "insurances": {
-          "damage": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": true
-          },
-          "thirdPartyLiability": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": 50000
-          },
-          "robberyTheft": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": true
-          },
-          "driverLiability": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": 10000
-          },
-          "passengerLiability": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": 10000
-          },
-          "glassBreakage": {
-            "coverage": "domestic"
-          },
-          "scratch": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": 2000
-          },
-          "spontaneousCombustion": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": true
-          },
-          "withAverage": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": true
-          },
-          "unknown3rdParty": {
-            "coverage": true
-          },
-          "moralDamageLiability": {
-            "noDeductible": {
-              "coverage": true
-            },
-            "coverage": 10000
-          },
-          "anyGarage": {
-            "coverage": true
-          }
-        }
-      }
-    },
-    "policy": {
-      "format": "electronic",
-      "formatText": "电子保单"
-    },
-    "verification": {
-      "code": "DSA2QV"
+    "cityCode": "440103",
+    "vehicleCode": "BZAAED0110",
+
+    "plateNo": "粤ANB810",
+    "vin": "ldc933l27a5348810",
+    "engineNo": "8534810",
+
+    "seats": 5,
+    "registrationDate": "20160611",
+    "invoiceDate": "",
+    "invoiceNo": "",
+    "pictures": {
+      "vehicleLicense": [""],
+      "vehicle": [""]
     }
   },
-  "product": {
-    "insured": {
-      "idCard": {
-        "expirationDate": "20170522",
-        "issueDate": "20070522",
-        "issuer": "洪泽县公安局",
-        "no": "320829198305230016",
-        "type": "身份证"
+  "insurances": {
+    "commerce": {
+      "insurances": {
+        "damage": {
+          "coverage": true,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "thirdPartyLiability": {
+          "coverage": 300000,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "robberyTheft": {
+          "coverage": true,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "driverLiability": {
+          "coverage": 10000,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "passengerLiability": {
+          "coverage": 10000,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "glassBreakage": {
+          "coverage": "domestic"
+        },
+        "spontaneousCombustion": {
+          "coverage": true,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "scratch": {
+          "coverage": 2000,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "withAverage": {
+          "coverage": true,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "unknown3rdParty": {
+          "coverage": true
+        },
+        "moralDamageLiability": {
+          "coverage": 10000,
+          "noDeductible": {
+            "coverage": true
+          }
+        },
+        "anyGarage": {
+          "coverage": true
+        }
       },
-      "phone": "13271822680",
-      "email": "chenjinlong@360bao.com",
-      "fullName": "栾健",
-      "idNo": "320829198305230016",
-      "address": "江苏省洪泽县高良涧镇大庆中路1-3号",
-      "ethnicity": "汉",
-      "birthDate": "19830523",
-      "sex": "男",
-      "idType": "身份证"
+      "startDate": "20170413"
     },
-    "applicant": {
-      "idCard": {
-        "expirationDate": "20170522",
-        "issueDate": "20070522",
-        "issuer": "洪泽县公安局",
-        "no": "320829198305230016",
-        "type": "身份证"
-      },
-      "phone": "13271822680",
-      "email": "chenjinlong@360bao.com",
-      "fullName": "栾健",
-      "idNo": "320829198305230016",
-      "address": "江苏省洪泽县高良涧镇大庆中路1-3号",
-      "ethnicity": "汉",
-      "birthDate": "19830523",
-      "sex": "男",
-      "idType": "身份证"
-    },
-    "addressee": {
-      "phone": "13271822680",
-      "email": "chenjinlong@360bao.com",
-      "fullName": "栾健",
-      "idNo": "320829198305230016",
-      "address": "江苏省洪泽县高良涧镇大庆中路1-3号",
-      "ethnicity": "汉",
-      "birthDate": "19830523",
-      "sex": "男",
-      "idType": "身份证"
-    },
-    "pid": "ax_auto",
-    "name": "安心互联网车险"
+    "compulsory": {
+      "coverage": true,
+      "startDate": "20170413"
+    }
   },
-  "payment": {
-    "methods": [
-      "alipay",
-      "wxpay"
-    ],
-    "returnUrl": "http://bit-s.cc:10069/return"
+  "policy": {
+    "format": "electronic"
   },
-  "statusNotifyUrl": "http://bit-s.cc:10069/notify"
+  "verification":
+  {
+    "code":""
+  }
 }
